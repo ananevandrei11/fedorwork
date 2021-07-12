@@ -1,0 +1,107 @@
+.menu {
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		@media screen and (max-width: 900px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@media screen and (max-width: 480px) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		margin-right: 49px;
+		white-space: nowrap;
+
+		&:nth-of-type(4) {
+			margin-right: 94px;
+		}
+
+		@media screen and (max-width: 1100px) {
+			margin-right: 25px;
+
+			&:nth-of-type(4) {
+				margin-right: 47px;
+			}
+		}
+		@media screen and (max-width: 1000px) {
+			margin-right: 10px;
+
+			&:nth-of-type(4) {
+				margin-right: 20px;
+			}
+		}
+		@media screen and (max-width: 480px) {
+			margin-right: 0px;
+			&:nth-of-type(4) {
+				margin-right: 0px;
+			}
+		}
+	}
+
+	&__link {
+		position: relative;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		color: #fff;
+		transition: color 0.4s ease 0.0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					border-bottom: 1px solid #fff;
+				}
+			}
+		}
+	}
+
+	&__link::after {
+		content: "";
+		position: absolute;
+		top: 29px;
+		left: 0px;
+		width: 55%;
+		height: 1px;
+		border-bottom: 1px solid transparent;
+		transition: border 0.4s ease 0.0s;
+	}
+
+	&__item-contacts {
+		@media screen and (max-width: 900px) {
+			max-width: 133px;
+			flex-basis: 100%;
+		}
+	}
+
+	.contacts {
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: nowrap;
+			gap: 14px;
+		}
+
+		&__link {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+		}
+
+		&__link-vk {
+			background: url("/img/contacts/vk.svg") center / contain no-repeat;
+		}
+
+		&__link-kwork {
+			background: url("/img/contacts/kwork.svg") center / 100% 100% no-repeat;
+		}
+
+		&__link-telegram {
+			background: url("/img/contacts/telegram.svg") center / 100% 100% no-repeat;
+		}
+	}
+}

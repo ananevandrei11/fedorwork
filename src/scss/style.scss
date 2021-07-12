@@ -5,13 +5,20 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
 }
 
 html {
+	height: 100%;
 	overflow-x: hidden;
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-width: 320px;
+	height: 100%;
 	font-family: Gilroy;
 	font-style: normal;
 	font-weight: normal;
@@ -27,6 +34,11 @@ a {
 	text-decoration: none;
 }
 
+button,
+label {
+	cursor: pointer;
+} 
+
 .wrapper {
 	width: 100%;
   max-width: 1250px;
@@ -38,8 +50,38 @@ a {
 	}
 }
 
+.main {
+	flex: 1 0 auto;
+	background-color: #fff;
+}
+
+.header,
+.footer {
+	width: 100%;
+}
+
 @import "_fonts.scss";
 //@import "_previosly.scss";
+/* avatar-start */
+@import "../scss/ui/avatar.scss";
+/* avatar-end */
+
+/* nav-start */
+@import "../scss/ui/nav.scss";
+/* nav-end */
+
+/* btn-start */
+@import "../scss/ui/btn.scss";
+/* btn-end */
+
 /* header-start */
 @import "_header.scss";
 /* header-end */
+
+/* form-start */
+@import "_form.scss";
+/* form-end */
+
+/* footer-start */
+@import "_footer.scss";
+/* footer-end */

@@ -3582,7 +3582,7 @@ gulp-file-include@^2.3.0:
     through2 "^4.0.2"
     vinyl "^2.2.1"
 
-gulp-fonter@0.3.0:
+gulp-fonter@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/gulp-fonter/-/gulp-fonter-0.3.0.tgz#7cfa04fda7a7fc74b703e27ee7d09fa4ded3e69a"
   integrity sha512-eaMw8yexRfe9X1UmMOLFF+2Lp/FUUrkdvRTxBm35tkdj3QM2KJc1EcKELrlj9qoHrECm/yun9KCjIyls3Qh2Jw==
@@ -3635,7 +3635,7 @@ gulp-sass@^5.0.0:
     transfob "^1.0.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
-gulp-ttf2woff2@4.0.1:
+gulp-ttf2woff2@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/gulp-ttf2woff2/-/gulp-ttf2woff2-4.0.1.tgz#a66dcd2ccac5a0b4a71203497f17857d6e652d18"
   integrity sha512-VkeQaXqTud/e4mDLIuWzRbR7+1QGkmmpRYek/cFZTe7pwsQJshisqSwPwxM7CBrypD7zK8WEH3ktNzFSsyanVg==

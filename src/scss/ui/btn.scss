@@ -1,0 +1,23 @@
+.btn-common	{
+	display: block;
+	background: #0500FF;
+	text-align: center;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 179.19%;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	@media screen and (max-width: 480px) {
+	font-size: 12px;
+	}
+	&:hover {
+		transform: translateY(-10px);
+		box-shadow: 0px 0px 50px rgba(5, 0, 255, 0.5);
+	}
+	&:active {
+		transform: translateY(0px);
+		box-shadow: 0px 0px 0px rgba(5, 0, 255, 0.5);
+	}
+}

@@ -1,0 +1,148 @@
+.formblock {
+	padding: 176px 0px 56px 0px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__info {
+		flex-basis: 57%;
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: 480px) {
+			flex-basis: 100%
+		}
+	}
+
+	&__form {
+		flex-basis: 39%;
+		max-width: 450px;
+		min-width: 268px;
+
+		@media screen and (max-width: 480px) {
+			flex-basis: 100%
+		}
+	}
+
+	.info {
+		&__title {
+			margin-bottom: 31px;
+			font-weight: 500;
+			font-size: 48px;
+			line-height: 56px;
+			color: #000;
+
+			@media screen and (max-width: 480px) {
+				margin-bottom: 22px;
+				font-size: 24px;
+				line-height: 28px;
+			}
+
+			span {
+				color: #0500FF;
+			}
+		}
+
+		&__text {
+			margin-bottom: 31px;
+			max-width: 458px;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 179.19%;
+			color: rgba(0, 0, 0, 0.7);
+
+			@media screen and (max-width: 480px) {
+				margin-bottom: 30px;
+				font-size: 12px;
+				line-height: 166.69%;
+			}
+		}
+
+		&__btn {
+			width: fit-content;
+			padding: 14px 36px 11px 37px;
+			border-radius: 58px;
+		}
+	}
+
+
+
+	.form {
+		padding: 32px 35px 33px 31px;
+		border-radius: 50px;
+		border: 1px solid #0500FF;
+
+		&__item {
+			margin-bottom: 25px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__title {
+			margin-bottom: 26px;
+			font-weight: 600;
+			font-size: 23px;
+			line-height: 27px;
+			color: #0500FF;
+		}
+
+		&__label {
+			margin-bottom: 25px;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 21px;
+			color: #000000;
+		}
+
+		&__input {
+			width: 100%;
+			max-width: 387px;
+			min-width: 221px;
+			padding: 18px 28px 17px 28px;
+			border-radius: 75px;
+			border: 1px solid #0500FF;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 16px;
+			color: rgba(0, 0, 0, 1);
+			&::placeholder {
+				color: rgba(0, 0, 0, 0.5)
+			}
+		}
+
+		.tarif {
+			margin-top: 32px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			&__head {
+				flex: 1 0 100%;
+			}
+			.input_tarif {
+				display: none;
+			}
+			&__label {
+				width: 105px;
+				padding: 13px 19px;
+				text-align: center;
+				border-radius: 75px;
+				border: 1px solid #0500FF;
+			}
+			.input_tarif:checked+label {
+				background: #0500FF;
+				color: #fff;
+			}
+		}
+
+		&__btn {
+			width: fit-content;
+			padding: 14px 58px 12px 58px;
+			border-radius: 75px;
+		}
+	}
+}

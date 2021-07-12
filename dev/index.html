@@ -14,50 +14,90 @@
 	<div class="wrapper">
 		<div class="header__content">
 			<!--HEADER LOGO BLOCK-->
-			<div class="header__avatar">
-				<a href="/" class="header__link header__link-logo">
-					<img class="header__img" src="img/avatar.png" alt="">
-				</a>
-				<div class="header__separator"></div>
-				<a href="/" class="header__link header__link-title">ФРИЛАНСЕР FEDOR-WORK</a>
-			</div>
+			<div class="avatar">
+	<a href="/" class="avatar__link avatar__link-logo">
+		<img class="avatar__img" src="img/avatar.png" alt="">
+	</a>
+	<div class="avatar__separator"></div>
+	<a href="/" class="avatar__link avatar__link-title">ФРИЛАНСЕР FEDOR-WORK</a>
+</div>
 			<!--HEADER MENU BLOCK-->
 			<div class="header__hamburger hamburger">
 				<div class="hamburger__item hamburger__item-1"></div>
 				<div class="hamburger__item hamburger__item-2"></div>
 			</div>
-			<nav class="header__menu menu">
-				<ul class="menu__list">
-					<li class="menu__item to-section-1">
-						<a href="#form" class="menu__link">Форма заявки</a>
-						<span class="menu__item-border"></span>
-					</li>
-					<li class="menu__item to-section-2">
-						<a href="#cost" class="menu__link">Цена</a>
-					</li>
-					<li class="menu__item to-section-3">
-						<a href="#portfolio" class="menu__link">Мои работы</a>
-					</li>
-					<li class="menu__item to-section-4">
-						<a href="#reviews" class="menu__link">Отзывы</a>
-					</li>
-					<li class="menu__item menu__item-contacts contacts">
-						<ul class="contacts__list">
-							<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk"></a></li>
-							<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork"></a></li>
-							<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram"></a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
+			<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a href="#form" class="menu__link">Форма заявки</a>
+			<span class="menu__item-border"></span>
+		</li>
+		<li class="menu__item">
+			<a href="#cost" class="menu__link">Цена</a>
+		</li>
+		<li class="menu__item">
+			<a href="#portfolio" class="menu__link">Мои работы</a>
+		</li>
+		<li class="menu__item">
+			<a href="#reviews" class="menu__link">Отзывы</a>
+		</li>
+		<li class="menu__item menu__item-contacts contacts">
+			<ul class="contacts__list">
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram"></a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
 		</div>
 	</div>
 </header>
 	
-	<!--
-		<main>
-		<section class="section1">
-    <div class="section__content">
+	
+		<main class="main">
+			<section class="formblock">
+    <div class="wrapper">
+        <div class="formblock__container">
+            <div class="formblock__info info">
+                <h1 class="info__title">Ускорение сайта Wordpress <span>по Google Page</span></h1>
+                <p class="info__text">Ускорю ваш сайт за адекватную стоимость. Вы получите от меня: хороший сервис, адекватность, высокую
+                    скорость выполения поставленных задач и комфорт в общении</p>
+                <button class="info__btn btn-common">Моё портфолио</button>
+            </div>
+            <form action="" class="formblock__form form">
+                <h4 class="form__title">Форма заявки</h4>
+                <!-- <p class="form__error">Введите корректные данные</p> -->
+                    <div class="form__item">
+                        <input class="form__input" type="text" id="input_name" name="input_name" placeholder="Ваше Имя">
+                    </div>
+                    <div class="form__item">
+                        <input class="form__input" type="text" id="input_link" name="input_link" placeholder="Ссылка на сайт">
+                    </div>
+                    <div class="form__item tarif">
+                        <label class="form__label tarif__head">Тариф:</label>
+
+                        <input type="radio" class="input_tarif" id="econom" name="input_tarif" value="Эконом" checked>
+                        <label for="econom" class="tarif__label for-tarif">Эконом</label>
+
+                        <input type="radio" class="input_tarif" id="standart" name="input_tarif" value="Стандарт">
+                        <label for="standart" class="tarif__label for-tarif">Стандарт</label>
+                        
+                        <input type="radio" class="input_tarif" id="business" name="input_tarif" value="Бизнес">
+                        <label for="business" class="tarif__label for-tarif">Бизнес</label>
+                    </div>
+                    <div class="form__item">
+                        <label for="input_email" class="form__label">
+                            Ваш телеграм/почтовый ящик
+                        </label>
+                        <input class="form__input" type="text" id="input_email" name="input_email" placeholder="@kiril/kiril@mail.ru">
+                    </div>
+                    <button class="form__btn btn-common" type="submit">Отправить</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- <div class="section__content">
         <div class="speed">
             <div class="speed__item">
                 <h1 class="speed__value">0</h1>
@@ -121,181 +161,50 @@
                 <button type="submit">Отправить</button>
             </form>
         </div>
-    </div>
+    </div> -->
 </section>
-		<section class="section2">
-	<div class="wrapper">
-			<h1 class="section__name">Ускорение сайта Wordpress по Google Page - цены:</h1>
-			<div class="workcost">
-					<div class="workcost__item">
-							<div class="workcost__open">
-									<h1 class="workcost__name"><span class="workcost__cost">500₽ </span>Эконом</h1>
-									<img class="workcost__icon" src="img/arrow-down.png" alt="" width="30px" height="30px">
-							</div>
-							<div class="workcost__info econom">
-									<ul class="workcost__options">
-											<li class="workcost__options-item">1 день на выполнение</li>
-											<li class="workcost__options-item">Обычно выполняет за 5 часов</li>
-											<li class="workcost__options-item">Оптимизация изображений</li>
-											<li class="workcost__options-item">Оптимизация html</li>
-											<li class="workcost__options-item">Оптимизация CSS, JS</li>
-											<li class="workcost__options-item">Настройка кеширвания</li>
-											<li class="workcost__options-item">Сокращение запросов</li>
-									</ul>
-									<button class="workcost__btn">Заказать за 500 ₽</button>
-							</div>
-					</div>
-					<div class="workcost__item standart">
-							<div class="workcost__open">
-									<h1 class="workcost__name"><span class="workcost__cost">1000₽ </span>Стандарт</h1>
-									<img class="workcost__icon" src="img/arrow-down.png" alt="" width="30px" height="30px">
-							</div>
-							<div class="workcost__info">
-									<ul class="workcost__options">
-											<li class="workcost__options-item">1 день на выполнение</li>
-											<li class="workcost__options-item">Обычно выполняет за 5 часов</li>
-											<li class="workcost__options-item">Оптимизация изображений</li>
-											<li class="workcost__options-item">Оптимизация html</li>
-											<li class="workcost__options-item">Оптимизация CSS, JS</li>
-											<li class="workcost__options-item">Настройка кеширвания</li>
-											<li class="workcost__options-item">Сокращение запросов</li>
-											<li class="workcost__options-item">WEBP</li>
-											<li class="workcost__options-item">Lazy Load скриптов</li>
-									</ul>
-									<button class="workcost__btn">Заказать за 1000 ₽</button>
-							</div>
-					</div>
-					<div class="workcost__item business">
-							<div class="workcost__open">
-									<h1 class="workcost__name"><span class="workcost__cost">1500₽ </span>Бизнес</h1>
-									<img class="workcost__icon" src="img/arrow-down.png" alt="" width="30px" height="30px">
-							</div>
-							<div class="workcost__info">
-									<ul class="workcost__options">
-											<li class="workcost__options-item">1 день на выполнение</li>
-											<li class="workcost__options-item">Обычно выполняет за 5 часов</li>
-											<li class="workcost__options-item">Оптимизация изображений</li>
-											<li class="workcost__options-item">Оптимизация html</li>
-											<li class="workcost__options-item">Оптимизация CSS, JS</li>
-											<li class="workcost__options-item">Настройка кеширвания</li>
-											<li class="workcost__options-item">Сокращение запросов</li>
-											<li class="workcost__options-item">WEBP</li>
-											<li class="workcost__options-item">Lazy Load скриптов</li>
-											<li class="workcost__options-item">Премиум плагины</li>
-									</ul>
-									<button class="workcost__btn">Заказать за 1500 ₽</button>
-							</div>
-					</div>
-			</div>
-	</div>
-</section>
-		<section class="section3">
-	<div class="wrapper">
-			<h1 class="section__name">Мои работы</h1>
-			<p class="section__description">Полное портфолио можно посмотреть <a href="https://kwork.ru/user/fedor-work" target="_blank">тут</a></p>
-			<div class="portfolio">
-					<div class="portfolio__item">
-					</div>
-					<div class="portfolio__item">
-					</div>
-					<div class="portfolio__item">
-					</div>
-					<div class="portfolio__item">
-					</div>
-					<div class="portfolio__item">
-					</div>
-					<div class="portfolio__item">
-					</div>
-			</div>
-	</div>
-</section>
-		<section class="section4">
-	<div class="wrapper">
-			<div class="section__name">Отзывы по кворку</div>
-			<p class="section__description">Больше отзывов <a href="https://kwork.ru/website-repair/10160085/uskorenie-sayta-wordpress-po-google-pagespeed-insights" target="_blank">тут</a></p>
-			<div class="review">
-					<div class="review__block">
-							<div class="review__user">
-									<div class="user__img">p</div>
-									<div class="user__content">
-											<h1 class="user__name">promokl</h1>
-											<span class="user__date">29 минут назад</span>
-											<p class="user__msg">Отличная работа.</p>
-									</div>
-							</div>
-							<div class="review__user">
-									<div class="user__img">p</div>
-									<div class="user__content">
-											<h1 class="user__name">promokl</h1>
-											<span class="user__date">3 часа назад</span>
-											<p class="user__msg">Всё как договаривались!!</p>
-									</div>
-							</div>
-							<div class="review__user">
-									<div class="user__img">V</div>
-									<div class="user__content">
-											<h1 class="user__name">Vitek_vvs</h1>
-											<span class="user__date">4 дня назад</span>
-											<p class="user__msg">Четко, быстро и по делу. Показатели 90% моб | +25% ПК.</p>
-									</div>
-							</div>
-							<div class="review__user">
-									<div class="user__img">A</div>
-									<div class="user__content">
-											<h1 class="user__name">Alex100zagorod</h1>
-											<span class="user__date">4 дня назад</span>
-											<p class="user__msg">Работа была сделана в течении дня. Результатом в общем доволен. <br>Спасибо</p>
-									</div>
-							</div>
-							<div class="review__user">
-									<div class="user__img">S</div>
-									<div class="user__content">
-											<h1 class="user__name">shuvay</h1>
-											<span class="user__date">10 дня назад</span>
-											<p class="user__msg">Выполнено быстро, качественно. <br><br>Доволен. <br><br>Заказал работу ещё для одного сайта, рекомендую исполнителя.</p>
-									</div>
-							</div>
-							<div class="review__user">
-									<div class="user__img">V</div>
-									<div class="user__content">
-											<h1 class="user__name">Vadzik</h1>
-											<span class="user__date">11 дней назад</span>
-											<p class="user__msg">Второй сайт сделал за 4 часа :) <br><br>По скорости +- одинаково как и с первым <br><br>Рекомендую продавца/исполнителя</p>
-									</div>
-							</div>
-					</div>
-			</div>
-	</div>
-</section>
+			
 	</main>
 	<footer class="footer">
 	<div class="wrapper">
-			<div class="footer__content">
-					<nav class="menu">
-							<li class="menu__item to-section-1">
-									<a href="#form" class="menu__link-second">Форма заявки</a>
-							</li>
-							<li class="menu__item to-section-2">
-									<a href="#cost" class="menu__link-second">Цена</a>
-							</li>
-							<li class="menu__item to-section-3">
-									<a href="#portfolio" class="menu__link-second">Мои работы</a>
-							</li>
-							<li class="menu__item to-section-4">
-									<a href="#reviews" class="menu__link-second">Отзывы</a>
-							</li>
-							<li class="menu__item contacts">
-									<ul class="contacts__list">
-											<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk"></a></li>
-											<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork"></a></li>
-											<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram"></a></li>
-									</ul>
-							</li>
-					</nav>
-			</div>
+		<div class="footer__content">
+			<!--footer LOGO BLOCK-->
+			<div class="avatar">
+	<a href="/" class="avatar__link avatar__link-logo">
+		<img class="avatar__img" src="img/avatar.png" alt="">
+	</a>
+	<div class="avatar__separator"></div>
+	<a href="/" class="avatar__link avatar__link-title">ФРИЛАНСЕР FEDOR-WORK</a>
+</div>
+			<!--footer MENU BLOCK-->
+			<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a href="#form" class="menu__link">Форма заявки</a>
+			<span class="menu__item-border"></span>
+		</li>
+		<li class="menu__item">
+			<a href="#cost" class="menu__link">Цена</a>
+		</li>
+		<li class="menu__item">
+			<a href="#portfolio" class="menu__link">Мои работы</a>
+		</li>
+		<li class="menu__item">
+			<a href="#reviews" class="menu__link">Отзывы</a>
+		</li>
+		<li class="menu__item menu__item-contacts contacts">
+			<ul class="contacts__list">
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram"></a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+		</div>
 	</div>
 </footer>
--->
+
 	<script src="js/vendors/vendors.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
