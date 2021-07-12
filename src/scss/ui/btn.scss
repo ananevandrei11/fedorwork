@@ -20,4 +20,7 @@
 		transform: translateY(0px);
 		box-shadow: 0px 0px 0px rgba(5, 0, 255, 0.5);
 	}
+	&:disabled {
+		background: #2825f3;
+	}
 }

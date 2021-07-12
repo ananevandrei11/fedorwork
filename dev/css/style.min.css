@@ -104,17 +104,16 @@ label {
 }
 
 @font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?amuczq");
-  src: url("../fonts/icomoon.eot?amuczq#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff2?amuczq") format("truetype"), url("../fonts/icomoon.woff?amuczq") format("woff"), url("../fonts/icomoon.svg?amuczq#icomoon") format("svg");
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.woff2?4a36xq") format("truetype"), url("../fonts/icomoon.woff?4a36xq") format("woff"), url("../fonts/icomoon.svg?4a36xq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -127,19 +126,19 @@ label {
 }
 
 .icon-arrow:before {
-  content: "";
+  content: "\e900";
 }
 
 .icon-menu:before {
-  content: "";
+  content: "\e901";
 }
 
 .icon-error:before {
-  content: "";
+  content: "\e902";
 }
 
 .icon-check:before {
-  content: "";
+  content: "\e903";
 }
 
 /* avatar-start */
@@ -299,6 +298,10 @@ label {
           box-shadow: 0px 0px 0px rgba(5, 0, 255, 0.5);
 }
 
+.btn-common:disabled {
+  background: #2825f3;
+}
+
 /* btn-end */
 /* header-start */
 .header {
@@ -418,8 +421,6 @@ label {
 .formblock__form {
   -ms-flex-preferred-size: 39%;
       flex-basis: 39%;
-  max-width: 450px;
-  min-width: 268px;
 }
 
 .formblock .info__title {
@@ -458,6 +459,7 @@ label {
 }
 
 .formblock .form__item {
+  position: relative;
   margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -515,6 +517,43 @@ label {
 
 .formblock .form__input::placeholder {
   color: rgba(0, 0, 0, 0.5);
+}
+
+.formblock .form__icon {
+  position: absolute;
+  right: 17px;
+}
+
+.formblock .form__icon .icon-check {
+  visibility: hidden;
+  top: 20px;
+  font-size: 12px;
+  color: #0500FF;
+}
+
+.formblock .form__icon .icon-error {
+  visibility: hidden;
+  font-size: 20px;
+  color: #FF0000;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.formblock .form__item-site .form__icon-check, .formblock .form__item-name .form__icon-check {
+  top: 20px;
+}
+
+.formblock .form__item-site .form__icon-error, .formblock .form__item-name .form__icon-error {
+  top: 17px;
+}
+
+.formblock .form__item-email .form__icon-check {
+  top: 65px;
+}
+
+.formblock .form__item-email .form__icon-error {
+  top: 62px;
 }
 
 .formblock .form .tarif {
@@ -686,6 +725,16 @@ label {
   .header .menu__item-contacts {
     margin: 0 auto;
   }
+  .formblock__info {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .formblock__form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
   .footer {
     min-height: auto;
     padding-top: 42px;
@@ -732,14 +781,6 @@ label {
   }
   .header {
     min-height: auto;
-  }
-  .formblock__info {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .formblock__form {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
   }
   .formblock .info__title {
     margin-bottom: 22px;

@@ -145,6 +145,7 @@ function styleDev() {
 function jsDev() {
 	return src([
 		'src/js/main.js',
+		'src/js/validator.js',
 		'!src/js/vendors/vendors.min.js'
 	])
 	.pipe(babel({

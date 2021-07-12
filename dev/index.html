@@ -65,14 +65,18 @@
                     скорость выполения поставленных задач и комфорт в общении</p>
                 <button class="info__btn btn-common">Моё портфолио</button>
             </div>
-            <form action="" class="formblock__form form">
+            <form id="form" action="" class="formblock__form form">
                 <h4 class="form__title">Форма заявки</h4>
                 <!-- <p class="form__error">Введите корректные данные</p> -->
-                    <div class="form__item">
-                        <input class="form__input" type="text" id="input_name" name="input_name" placeholder="Ваше Имя">
+                    <div class="form__item  form__item-name">
+                        <input class="form__input" type="text" id="input_name" name="input_name" placeholder="Ваше Имя" required>
+                        <span class="form__icon form__icon-check"><i class="icon-check"></i></span>
+                        <span class="form__icon form__icon-error"><i class="icon-error"></i></span>
                     </div>
-                    <div class="form__item">
-                        <input class="form__input" type="text" id="input_link" name="input_link" placeholder="Ссылка на сайт">
+                    <div class="form__item  form__item-site">
+                        <input class="form__input" type="text" id="input_link" name="input_link" placeholder="Ссылка на сайт" required>
+                        <span class="form__icon form__icon-check"><i class="icon-check"></i></span>
+                        <span class="form__icon form__icon-error"><i class="icon-error"></i></span>
                     </div>
                     <div class="form__item tarif">
                         <label class="form__label tarif__head">Тариф:</label>
@@ -86,13 +90,15 @@
                         <input type="radio" class="input_tarif" id="business" name="input_tarif" value="Бизнес">
                         <label for="business" class="tarif__label for-tarif">Бизнес</label>
                     </div>
-                    <div class="form__item">
+                    <div class="form__item form__item-email">
                         <label for="input_email" class="form__label">
                             Ваш телеграм/почтовый ящик
                         </label>
-                        <input class="form__input" type="text" id="input_email" name="input_email" placeholder="@kiril/kiril@mail.ru">
+                        <input class="form__input" type="text" id="input_email" name="input_email" placeholder="@kiril/kiril@mail.ru" required>
+                        <span class="form__icon form__icon-check"><i class="icon-check"></i></span>
+                        <span class="form__icon form__icon-error"><i class="icon-error"></i></span>
                     </div>
-                    <button class="form__btn btn-common" type="submit">Отправить</button>
+                    <button class="form__btn btn-common" type="submit" disabled>Отправить</button>
             </form>
         </div>
 
