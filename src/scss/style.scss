@@ -1,0 +1,45 @@
+//COMMON
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: #000000;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0px 40px;
+  overflow: visible;
+	@media (max-width: 480px) {
+		padding: 0px 30px;
+	}
+}
+
+@import "_fonts.scss";
+//@import "_previosly.scss";
+/* header-start */
+@import "_header.scss";
+/* header-end */
