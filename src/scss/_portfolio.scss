@@ -12,36 +12,19 @@
 	&__title {
 		margin-bottom: 16px;
 		text-align: center;
-		font-weight: 500;
-		font-size: 40px;
-		line-height: 47px;
-		color: #000;
 
 		@media screen and (max-width: 480px) {
 			margin-bottom: 14px;
-			font-size: 23px;
-			line-height: 27px;
 		}
 	}
 
 	&__description {
 		margin: 0 auto;
 		margin-bottom: 45px;
-		font-weight: 300;
-		font-size: 18px;
-		line-height: 21px;
-		color: rgba(0, 0, 0, 0.7);
-
-		a {
-			font-weight: 500;
-			color: #0500FF;
-		}
 
 		@media screen and (max-width: 480px) {
 			max-width: 174px;
 			margin-bottom: 29px;
-			font-size: 14px;
-			line-height: 16px;
 		}
 	}
 
@@ -135,7 +118,7 @@
 		width: 64px;
 		height: 64px;
 		border-radius: 50px;
-		border: 1px solid #0500FF;
+		border: 1px solid $mainColor;
 		background-color: transparent;
 
 		@media screen and (max-width: 900px) {
@@ -144,7 +127,7 @@
 
 		i {
 			font-size: 19px;
-			color: #0500FF;
+			color: $mainColor;
 		}
 
 		&:disabled {
@@ -179,7 +162,7 @@
 	top: 15%;
 	left: 15%;
 	background-color: rgba(161, 159, 159, 0.9);
-	border: 1px solid #0500FF;
+	border: 1px solid $mainColor;
 	width: 70vw;
 	height: 70vh;
 	z-index: 1000;
@@ -192,6 +175,7 @@
 		left: 7.5%;
 		width: 85vw;
 		height: 85vh;
+		flex-direction: column;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -206,6 +190,7 @@
 		width: 90%;
 		height: 90%;
 		aspect-ratio: 4/3;
+
 		@media screen and (max-width: 480px) {
 			width: 95%;
 			height: 95%;
@@ -226,13 +211,26 @@
 		font-size: 40px;
 		cursor: pointer;
 	}
+
 	&__icon-prev,
 	&__icon-next {
 		font-size: 40px;
 		cursor: pointer;
+		@media screen and (max-width: 740px) {
+			position: absolute;
+			bottom:10%;
+		}
+	}
+	&__icon-prev {
+		@media screen and (max-width: 740px) {
+			left: 10%;
+		}
 	}
 	&__icon-next {
 		transform: rotate(180deg);
+		@media screen and (max-width: 740px) {
+			right: 10%;
+		}
 	}
 }
 

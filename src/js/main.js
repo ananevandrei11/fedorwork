@@ -51,7 +51,6 @@ window.onload = function () {
 	let carouselWork = document.querySelector('.portfolio__carousel');
 	let listWork = carouselWork.querySelector('.portfolio__slider');
 	let listElemsWork = carouselWork.querySelectorAll('.portfolio__item');
-	let galleriBlockWork = carouselWork.querySelector('.portfolio__gallery');
 	let btnPrevWork = carouselWork.querySelector('.portfolio__arrow-prev');
 	let btnNextWork = carouselWork.querySelector('.portfolio__arrow-next');
 	let btnLoadWork = document.querySelector('.portfolio__btn-load');
@@ -59,28 +58,16 @@ window.onload = function () {
 	let widthWork = 347;
 	let countWork;
 
-	let modalGlr = document.querySelector('.modal-slider');
-	let closeGlr = modalGlr.querySelector('.icon-error');
-	closeGlr.onclick = () => {
-		modalGlr.classList.remove('modal-slider__open');
-		modalGlr.classList.add('modal-slider__close');
-	}
-	listWork.onclick = function(e) {
-		let target = e.target;
-		if (target.tagName != 'IMG') return false;
-		
-		let imgGlr = modalGlr.querySelector('img');
-		modalGlr.classList.remove('modal-slider__close');
-		modalGlr.classList.add('modal-slider__open');
-		imgGlr.setAttribute('src', target.getAttribute('src'));
+	function setCount() {
+		if (window.innerWidth > 1240) {
+			return 3;
+		} else if (window.innerWidth <= 1240) {
+			return 2;
+		}
 	}
 
 	btnPrevWork.onclick = function () {
-		if (window.innerWidth > 1240) {
-			countWork = 3;
-		} else if (window.innerWidth <= 1240) {
-			countWork = 2;
-		}
+		countWork = setCount();
 		positionWork += widthWork * countWork;
 		if (positionWork == 0) {
 			this.setAttribute('disabled', 'disabled');
@@ -94,11 +81,7 @@ window.onload = function () {
 	};
 
 	btnNextWork.onclick = function () {
-		if (window.innerWidth > 1240) {
-			countWork = 3;
-		} else if (window.innerWidth <= 1240) {
-			countWork = 2;
-		}
+		countWork = setCount();
 		positionWork -= widthWork * countWork;
 		let disPointWork = (listElemsWork.length * widthWork);
 		if (Math.abs(positionWork) >= disPointWork) {
@@ -113,11 +96,12 @@ window.onload = function () {
 	};
 
 	btnLoadWork.onclick = function () {
+
 		let arrClass = [];
 		listElemsWork.forEach((item, ind) => {
 			if (item.classList.contains('portfolio__item-open')) {
 				arrClass.push(ind);
-			};
+			}
 		});
 
 		if (arrClass.length < listElemsWork.length) {
@@ -133,76 +117,52 @@ window.onload = function () {
 					listElemsWork[i].classList.add('portfolio__item-open');
 				}
 			}
-
 		}
 	}
 	// CAROUSEL WORKS END
 
-
-	// CAROUSEL REVIEW START
-	/*
-	let carouselReview = document.querySelector('.reviews__carusel');
-	let listReview = carouselReview.querySelector('.reviews__slider');
-	let listElemsReview = carouselReview.querySelectorAll('.reviews__item');
-	let galleriBlockReview = carouselReview.querySelector('.reviews__gallery');
-	let btnPrevReview = carouselReview.querySelector('.reviews__arrow-prev');
-	let btnNextReview = carouselReview.querySelector('.reviews__arrow-next');
-	let btnLoadReview = document.querySelector('.reviews__btn-load');
-	let positionReview = 0;
-	let heightReview = 149;
-	let countReview = 2;
-
-	btnPrevReview.onclick = function () {
-		positionReview += heightReview * countReview;
-		if (positionReview == 0) {
-			this.setAttribute('disabled', 'disabled');
-			btnNextReview.removeAttribute('disabled');
-		} else {
-			this.removeAttribute('disabled');
-			btnNextReview.removeAttribute('disabled');
-		}
-		positionReview = Math.min(positionReview, 0)
-		listReview.style.marginTop = positionReview + 'px';
-	};
-
-	btnNextReview.onclick = function () {
-		positionReview -= heightReview * countReview;
-		let disPointReview = (listElemsReview.length * heightReview);
-		if (Math.abs(positionReview) >= disPointReview) {
-			this.setAttribute('disabled', 'disabled');
-			btnPrevReview.removeAttribute('disabled');
-		} else {
-			this.removeAttribute('disabled');
-			btnPrevReview.removeAttribute('disabled');
-		}
-		positionReview = Math.max(positionReview, -heightReview * (listElemsReview.length - countReview));
-		listReview.style.marginTop = positionReview + 'px';
-	};
-
-	btnLoadReview.onclick = function () {
-		let arrClass = [];
-		listElemsReview.forEach((item, ind) => {
-			if (item.classList.contains('reviews__item-open')) {
-				arrClass.push(ind);
-			};
-		});
-
-		if (arrClass.length < listElemsReview.length) {
-			let diffLength = listElemsReview.length - arrClass.length;
-			if (diffLength > 3) {
-				for (let i = arrClass.length; i < arrClass.length + 3; i++) {
-					listElemsReview[i].classList.remove('reviews__item-close');
-					listElemsReview[i].classList.add('reviews__item-open');
-				}
-			} else {
-				for (let i = arrClass.length; i < arrClass.length + diffLength; i++) {
-					listElemsReview[i].classList.remove('reviews__item-close');
-					listElemsReview[i].classList.add('reviews__item-open');
-				}
-			}
-
-		}
+	// MODAL GALLERY START
+	let modalGlr = document.querySelector('.modal-slider');
+	let imgGlr = modalGlr.querySelector('img');
+	let arrGlr = document.querySelectorAll('.portfolio__img');
+	let closeGlr = modalGlr.querySelector('.icon-error');
+	let modalPrev = modalGlr.querySelector('.modal-slider__icon-prev');
+	let modalNExt = modalGlr.querySelector('.modal-slider__icon-next');
+	closeGlr.onclick = () => {
+		modalGlr.classList.remove('modal-slider__open');
+		modalGlr.classList.add('modal-slider__close');
 	}
-	*/
-	// CAROUSEL REVIEW END
+	listWork.onclick = function (e) {
+		let target = e.target;
+		if (target.tagName != 'IMG') return false;
+		modalGlr.classList.remove('modal-slider__close');
+		modalGlr.classList.add('modal-slider__open');
+		imgGlr.setAttribute('src', target.getAttribute('src'));
+	}
+
+	let arrImg = [];
+	arrGlr.forEach(item => {
+		arrImg.push(item.getAttribute('src'));
+	});
+
+	modalPrev.onclick = function () {
+		let imgCurrent = imgGlr.getAttribute('src');
+		let imgIndex = arrImg.indexOf(imgCurrent);
+		if (imgIndex == 0) {
+			imgIndex = arrImg.length;
+		}
+		imgIndex--;
+		imgGlr.setAttribute('src', arrImg[imgIndex]);
+	}
+
+	modalNExt.onclick = function () {
+		let imgCurrent = imgGlr.getAttribute('src');
+		let imgIndex = arrImg.indexOf(imgCurrent);
+		imgIndex++;
+		if (imgIndex == arrImg.length) {
+			imgIndex = 0;
+		}
+		imgGlr.setAttribute('src', arrImg[imgIndex]);
+	}
+	// MODAL GALLERY END
 }

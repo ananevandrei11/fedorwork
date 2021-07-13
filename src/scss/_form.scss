@@ -47,7 +47,7 @@
 			font-weight: 500;
 			font-size: 48px;
 			line-height: 56px;
-			color: #000;
+			color: $colorText;
 
 			@media screen and (max-width: 480px) {
 				margin-bottom: 22px;
@@ -56,7 +56,7 @@
 			}
 
 			span {
-				color: #0500FF;
+				color: $mainColor;
 			}
 		}
 
@@ -86,7 +86,7 @@
 	.form {
 		padding: 32px 35px 33px 31px;
 		border-radius: 50px;
-		border: 1px solid #0500FF;
+		border: 1px solid $mainColor;
 		@media screen and (max-width: 480px) {
 			padding: 16px 23px 19px 24px;
 		}
@@ -105,7 +105,7 @@
 			font-weight: 600;
 			font-size: 23px;
 			line-height: 27px;
-			color: #0500FF;
+			color: $mainColor;
 
 			@media screen and (max-width: 480px) {
 				margin-bottom: 17px;
@@ -119,7 +119,7 @@
 			font-weight: 600;
 			font-size: 18px;
 			line-height: 21px;
-			color: #000000;
+			color: $colorText;
 			@media screen and (max-width: 480px) {
 				font-size: 15px;
 				line-height: 18px;
@@ -132,7 +132,7 @@
 			min-width: 221px;
 			padding: 18px 28px 17px 28px;
 			border-radius: 75px;
-			border: 1px solid #0500FF;
+			border: 1px solid $mainColor;
 			font-weight: 300;
 			font-size: 14px;
 			line-height: 16px;
@@ -155,7 +155,7 @@
 				visibility: hidden;
 				top: 20px;
 				font-size: 12px;
-				color: #0500FF;
+				color: $mainColor;
 			}
 
 			.icon-error {
@@ -221,7 +221,7 @@
 				padding: 13px 19px;
 				text-align: center;
 				border-radius: 75px;
-				border: 1px solid #0500FF;
+				border: 1px solid $mainColor;
 				@media screen and (max-width: 480px) {
 					width: 71px;
 					padding: 9px 15px;
@@ -231,7 +231,7 @@
 			}
 
 			.input_tarif:checked+label {
-				background: #0500FF;
+				background: $mainColor;
 				color: #fff;
 			}
 		}

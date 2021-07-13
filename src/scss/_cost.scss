@@ -9,14 +9,8 @@
 	&__title {
 		margin-bottom: 63px;
 		text-align: center;
-		font-weight: 500;
-		font-size: 40px;
-		line-height: 47px;
-		color: #000;
 		@media screen and (max-width: 480px) {
 			margin-bottom: 18px;
-			font-size: 23px;
-			line-height: 27px;
 		}
 	}
 
@@ -42,7 +36,7 @@
 			display: inline-block;
 			max-width: 277px;
 			padding: 14px 31px;
-			border: 1px solid #0500FF;
+			border: 1px solid $mainColor;
 			box-sizing: border-box;
 			border-radius: 59px;
 			transition: all 0.4s ease;
@@ -60,7 +54,7 @@
 			font-weight: 600;
 			font-size: 18px;
 			line-height: 21px;
-			color: #000;
+			color: $colorText;
 			cursor: pointer;
 		}
 
@@ -70,7 +64,7 @@
 
 		&__icon {
 			font-size: 8px;
-			color: #0500FF;
+			color: $mainColor;
 		}
 
 		&__info {
@@ -96,7 +90,7 @@
 		}
 
 		&__item {
-			color: #0500FF;
+			color: $mainColor;
 			font-size: 14px;
 			line-height: 237.3%;
 

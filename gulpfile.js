@@ -15,8 +15,9 @@ const mqpacker = require('css-mqpacker');
 var gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso');
 // JS
-const uglify = require('gulp-uglify-es').default;
+//const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
+//const sourcemaps = require('gulp-sourcemaps');
 // IMAGE
 const imagemin = require('gulp-imagemin');
 // FONTS
@@ -48,10 +49,9 @@ function js() {
 		'dev/js/script.min.js',
 		'!dev/js/vendors/vendors.min.js'
 	])
-	.pipe(uglify())
 	.pipe(dest('dist/js'))
 }
-
+//minimization - .pipe(uglify())
 // function jsVendors() {
 // 	return src([
 // 		'dev/js/vendors/vendors.min.js',
@@ -146,9 +146,9 @@ function styleDev() {
 
 function jsDev() {
 	return src([
-		'src/js/main.js',
 		'src/js/validator.js',
 		'src/js/telegram.js',
+		'src/js/main.js',
 		'!src/js/vendors/vendors.min.js'
 	])
 	.pipe(babel({
