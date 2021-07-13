@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,24 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="shortcut icon" href="img/favic.png" type="image/x-icon" />
 </head>
+
 <body>
+	<div class="push-block">
+	<div class="push">
+			<div class="push__head">
+					<h1>Отправить сообщение(Заказ)</h1>
+					<div class="push__close">
+							<div class="push__close-item"></div>
+							<div class="push__close-item"></div>
+					</div>
+			</div>
+			<div class="push__content">
+					<img src="img/push-access.png" alt="" class="push__success img" width="64px" height="64px">
+					<h1 class="push__success name">Заявка успешно отправлена</h1>
+					<p class="push__info">В течении 15 минут с вами свяжутся</p>
+			</div>
+	</div>
+</div>
 	<header class="header">
 	<div class="wrapper">
 		<div class="header__content">
@@ -53,10 +71,8 @@
 		</div>
 	</div>
 </header>
-	
-	
-		<main class="main">
-			<section class="formblock">
+	<main class="main">
+		<section class="formblock">
     <div class="wrapper">
         <div class="formblock__container">
             <div class="formblock__info info">
@@ -65,7 +81,7 @@
                     скорость выполения поставленных задач и комфорт в общении</p>
                 <button class="info__btn btn-common">Моё портфолио</button>
             </div>
-            <form id="form" action="" class="formblock__form form">
+            <form id="form" action="" class="formblock__form form" name="mainForm">
                 <h4 class="form__title">Форма заявки</h4>
                 <!-- <p class="form__error">Введите корректные данные</p> -->
                     <div class="form__item  form__item-name">
@@ -169,7 +185,7 @@
         </div>
     </div> -->
 </section>
-			<section id="cost" class="cost">
+		<section id="cost" class="cost">
 	<div class="wrapper">
 		<h2 class="cost__title">Ускорение сайта Wordpress по Google Page - цены:</h2>
 		<div class="cost__list workcost">
@@ -282,7 +298,7 @@
 		</div>
 	</div>
 </section>
-			<section id="portfolio" class="portfolio">
+		<section id="portfolio" class="portfolio">
 	<div class="wrapper">
 		<h2 class="portfolio__title">Мои работы</h2>
 		<p class="portfolio__description">Полное портфолио можно посмотреть <a href="https://kwork.ru/user/fedor-work"
@@ -361,7 +377,8 @@
 	</div>
 </footer>
 
-	<script src="js/vendors/vendors.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
+
 </html>

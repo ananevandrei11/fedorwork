@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +10,19 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="shortcut icon" href="img/favic.png" type="image/x-icon" />
 </head>
+
 <body>
+	@@include('../components/push.html')
 	@@include('../components/header.html')
-	
-	
-		<main class="main">
-			@@include('../components/form.html')
-			@@include('../components/cost.html')
-			@@include('../components/portfolio.html')
+	<main class="main">
+		@@include('../components/form.html')
+		@@include('../components/cost.html')
+		@@include('../components/portfolio.html')
 	</main>
 	@@include('../components/footer.html')
 
-	<script src="js/vendors/vendors.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
+
 </html>
