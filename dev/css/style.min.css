@@ -402,8 +402,6 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .formblock__info {
@@ -421,6 +419,7 @@ i {
 .formblock__form {
   -ms-flex-preferred-size: 39%;
       flex-basis: 39%;
+  min-width: 390px;
 }
 
 .formblock .info__title {
@@ -473,8 +472,8 @@ i {
 .formblock .form__title {
   margin-bottom: 26px;
   font-weight: 600;
-  font-size: 23px;
-  line-height: 27px;
+  font-size: 15px;
+  line-height: 18px;
   color: #0500FF;
 }
 
@@ -583,7 +582,7 @@ i {
 }
 
 .formblock .form .tarif__label {
-  width: 105px;
+  width: 103px;
   padding: 13px 19px;
   text-align: center;
   border-radius: 75px;
@@ -604,6 +603,138 @@ i {
 }
 
 /* form-end */
+/* cost-start */
+.cost {
+  padding: 56px 0px;
+  height: auto;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.cost__title {
+  margin-bottom: 63px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000;
+}
+
+.cost__list {
+  height: auto;
+}
+
+.cost .workcost {
+  max-width: 1070px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cost .workcost__product {
+  display: inline-block;
+  max-width: 277px;
+  padding: 14px 31px;
+  border: 1px solid #0500FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 59px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.cost .workcost__product-open {
+  border-radius: 19px;
+  padding: 15px 29px 21px 31px;
+}
+
+.cost .workcost__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  cursor: pointer;
+}
+
+.cost .workcost__cost {
+  color: #00FF19;
+}
+
+.cost .workcost__icon {
+  font-size: 8px;
+  color: #0500FF;
+}
+
+.cost .workcost__info {
+  height: 0px;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cost .workcost__info-open {
+  margin-top: 29px;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+.cost .workcost__list {
+  list-style: disc;
+  margin-left: 15px;
+  margin-bottom: 29px;
+}
+
+.cost .workcost__item {
+  color: #0500FF;
+  font-size: 14px;
+  line-height: 237.3%;
+}
+
+.cost .workcost__item span {
+  color: #000;
+}
+
+.cost .workcost__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 20px;
+  font-size: 11px;
+  line-height: 237.3%;
+  border-radius: 75px;
+}
+
+/* cost-end */
 /* footer-start */
 .footer {
   padding: 105px 0px;
@@ -694,13 +825,13 @@ i {
     gap: 7px;
   }
   .header .menu {
+    width: 100%;
     position: absolute;
     top: -900px;
     left: 0;
     opacity: 0;
     z-index: -1;
     background-color: #FFFFFF;
-    width: 100vw;
     -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
   }
@@ -725,15 +856,29 @@ i {
   .header .menu__item-contacts {
     margin: 0 auto;
   }
+  .formblock__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .formblock__info {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+    margin-bottom: 103px;
   }
   .formblock__form {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 450px;
-    margin: 0 auto;
+    min-width: 268px;
+  }
+  .cost .workcost {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    gap: 29px;
   }
   .footer {
     min-height: auto;
@@ -782,15 +927,75 @@ i {
   .header {
     min-height: auto;
   }
+  .formblock {
+    padding: 203px 0px 32px 0px;
+  }
+  .formblock__form {
+    max-width: 268px;
+  }
   .formblock .info__title {
     margin-bottom: 22px;
     font-size: 24px;
     line-height: 28px;
   }
   .formblock .info__text {
+    max-width: 100%;
     margin-bottom: 30px;
     font-size: 12px;
     line-height: 166.69%;
+  }
+  .formblock .form {
+    padding: 16px 23px 19px 24px;
+  }
+  .formblock .form__item {
+    margin-bottom: 17px;
+  }
+  .formblock .form__title {
+    margin-bottom: 17px;
+    font-size: 23px;
+    line-height: 27px;
+  }
+  .formblock .form__label {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .formblock .form__input {
+    padding: 12px 22px 11px 22px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .formblock .form__item-site .form__icon-check, .formblock .form__item-name .form__icon-check {
+    top: 10px;
+  }
+  .formblock .form__item-site .form__icon-error, .formblock .form__item-name .form__icon-error {
+    top: 7px;
+  }
+  .formblock .form__item-email .form__icon-check {
+    top: 55px;
+  }
+  .formblock .form__item-email .form__icon-error {
+    top: 52px;
+  }
+  .formblock .form .tarif {
+    margin-top: 21px;
+  }
+  .formblock .form .tarif__label {
+    width: 71px;
+    padding: 9px 15px;
+    font-size: 9px;
+    line-height: 10px;
+  }
+  .formblock .form__btn {
+    padding: 7px 19px;
+    font-size: 11px;
+  }
+  .cost {
+    padding: 32px 0px;
+  }
+  .cost__title {
+    margin-bottom: 18px;
+    font-size: 23px;
+    line-height: 27px;
   }
   .footer .menu__item {
     margin-bottom: 21px;
@@ -815,6 +1020,10 @@ i {
   }
   .menu__item:nth-of-type(4) {
     margin-right: 20px;
+  }
+  .formblock__info {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
