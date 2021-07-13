@@ -48,7 +48,7 @@ label {
   margin: 0 auto;
   padding: 0px 40px;
   overflow: visible;
-	@media (max-width: 480px) {
+	@media screen and (max-width: 480px) {
 		padding: 0px 30px;
 	}
 }
@@ -96,6 +96,10 @@ label {
 /* portfolio-start */
 @import "_portfolio.scss";
 /* portfolio-end */
+
+/* reviews-start */
+@import "_reviews.scss";
+/* reviews-end */
 
 /* footer-start */
 @import "_footer.scss";

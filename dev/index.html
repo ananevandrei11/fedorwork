@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ускорение сайта</title>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
@@ -83,7 +83,6 @@
             </div>
             <form id="form" action="" class="formblock__form form" name="mainForm">
                 <h4 class="form__title">Форма заявки</h4>
-                <!-- <p class="form__error">Введите корректные данные</p> -->
                     <div class="form__item  form__item-name">
                         <input class="form__input" type="text" id="input_name" name="input_name" placeholder="Ваше Имя" required>
                         <span class="form__icon form__icon-check"><i class="icon-check"></i></span>
@@ -119,71 +118,6 @@
         </div>
 
     </div>
-    <!-- <div class="section__content">
-        <div class="speed">
-            <div class="speed__item">
-                <h1 class="speed__value">0</h1>
-                <svg width="180px" height="180px">
-                    <circle class="speed__сircle" stroke="#08d16d" stroke-width="7" cx="90" cy="90" r="60"
-                        fill="#e7fbef"></circle>
-                </svg>
-            </div>
-            <div class="speed__item">
-                <h1 class="speed__value">0</h1>
-                <svg width="180px" height="180px">
-                    <circle class="speed__сircle" stroke="#08d16d" stroke-width="7" cx="90" cy="90" r="60"
-                        fill="#e7fbef"></circle>
-                </svg>
-            </div>
-        </div>
-        <div class="form__block">
-            <h1 class="section__name">Форма заявки</h1>
-            <form class="form" id="form" name="mainForm">
-                <p class="form__error">Введите корректные данные</p>
-                <div class="form__item">
-                    <label for="input_name">
-                        <p>Ваше Имя</p>
-                    </label>
-                    <input type="text" id="input_name" name="input_name" placeholder="Кирилл">
-                </div>
-                <div class="form__item">
-                    <label for="input_link">
-                        <p>Ссылка на сайт</p>
-                    </label>
-                    <input type="text" id="input_link" name="input_link" placeholder="kirillsite.ru">
-                </div>
-                <div class="form__item tarif">
-                    <label for="" class="tarif__head">
-                        <p>Тариф:</p>
-                    </label>
-                    <input type="radio" class="input_tarif" id="econom" name="input_tarif" value="Эконом" checked>
-                    <label for="econom" class="for-tarif">Эконом</label>
-                    <input type="radio" class="input_tarif" id="standart" name="input_tarif" value="Стандарт">
-                    <label for="standart" class="for-tarif">Стандарт</label>
-                    <input type="radio" class="input_tarif" id="business" name="input_tarif" value="Бизнес">
-                    <label for="business" class="for-tarif">Бизнес</label>
-                    <div class="select">
-                        <div class="select__header">
-                            <span class="select__current">Эконом</span>
-                            <div class="select__icon">&#8595;</div>
-                        </div>
-                        <div class="select__body">
-                            <div class="select__item">Эконом</div>
-                            <div class="select__item">Стандарт</div>
-                            <div class="select__item">Бизнес</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form__item">
-                    <label for="input_email">
-                        <p>Ваш телеграм/почтовый ящик</p>
-                    </label>
-                    <input type="text" id="input_email" name="input_email" placeholder="@kirill / kirill@mail.ru">
-                </div>
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
-    </div> -->
 </section>
 		<section id="cost" class="cost">
 	<div class="wrapper">
@@ -303,7 +237,7 @@
 		<h2 class="portfolio__title">Мои работы</h2>
 		<p class="portfolio__description">Полное портфолио можно посмотреть <a href="https://kwork.ru/user/fedor-work"
 				target="_blank">тут</a></p>
-		<div class="portfolio__carusel">
+		<div class="portfolio__carousel">
 			<button class="portfolio__arrow portfolio__arrow-prev" disabled>
 				<i class="icon-arrow"></i>
 			</button>
@@ -335,6 +269,100 @@
 		</div>
 		<button class="btn-common portfolio__btn portfolio__btn-load">Загрузить ещё</button>
 	</div>
+</section>
+		<section id="reviews" class="reviews">
+	<div class="wrapper">
+		<h2 class="reviews__title">Отзывы по кворку</h2>
+		<p class="reviews__description">Больше отзывов <a
+				href="https://kwork.ru/website-repair/10160085/uskorenie-sayta-wordpress-po-google-pagespeed-insights"
+				target="_blank">тут</a></p>
+		<div class="reviews__carusel">
+			<button class="reviews__arrow reviews__arrow-prev" disabled>
+				<i class="icon-arrow"></i>
+			</button>
+			<div class="reviews__gallery">
+				<ul class="reviews__slider">
+					<li class="reviews__item reviews__item-open">
+						<img class="reviews__img" src="../img/vk_comment.png" alt="1">
+					</li>
+					<li class="reviews__item reviews__item-open">
+						<img class="reviews__img" src="../img/vk_comment.png" alt="2">
+					</li>
+					<li class="reviews__item reviews__item-open">
+						<img class="reviews__img" src="../img/vk_comment.png" alt="3">
+					</li>
+					<li class="reviews__item reviews__item-close">
+						<img class="reviews__img" src="../img/vk_comment.png" alt="4">
+					</li>
+					<li class="reviews__item reviews__item-close">
+						<img class="reviews__img" src="../img/vk_comment.png" alt="5">
+					</li>
+					<li class="reviews__item reviews__item-close">
+						<img class="reviews__img" src="../img/vk_comment.png" alt="6">
+					</li>
+				</ul>
+			</div>
+			<button class="reviews__arrow reviews__arrow-next">
+				<i class="icon-arrow"></i>
+			</button>
+		</div>
+		<button class="btn-common reviews__btn reviews__btn-load">Загрузить ещё</button>
+
+		<!-- <div class="section__name">Отзывы по кворку</div>
+			<p class="section__description">Больше отзывов <a href="https://kwork.ru/website-repair/10160085/uskorenie-sayta-wordpress-po-google-pagespeed-insights" target="_blank">тут</a></p>
+			<div class="review">
+					<div class="review__block">
+							<div class="review__user">
+									<div class="user__img">p</div>
+									<div class="user__content">
+											<h1 class="user__name">promokl</h1>
+											<span class="user__date">29 минут назад</span>
+											<p class="user__msg">Отличная работа.</p>
+									</div>
+							</div>
+							<div class="review__user">
+									<div class="user__img">p</div>
+									<div class="user__content">
+											<h1 class="user__name">promokl</h1>
+											<span class="user__date">3 часа назад</span>
+											<p class="user__msg">Всё как договаривались!!</p>
+									</div>
+							</div>
+							<div class="review__user">
+									<div class="user__img">V</div>
+									<div class="user__content">
+											<h1 class="user__name">Vitek_vvs</h1>
+											<span class="user__date">4 дня назад</span>
+											<p class="user__msg">Четко, быстро и по делу. Показатели 90% моб | +25% ПК.</p>
+									</div>
+							</div>
+							<div class="review__user">
+									<div class="user__img">A</div>
+									<div class="user__content">
+											<h1 class="user__name">Alex100zagorod</h1>
+											<span class="user__date">4 дня назад</span>
+											<p class="user__msg">Работа была сделана в течении дня. Результатом в общем доволен. <br>Спасибо</p>
+									</div>
+							</div>
+							<div class="review__user">
+									<div class="user__img">S</div>
+									<div class="user__content">
+											<h1 class="user__name">shuvay</h1>
+											<span class="user__date">10 дня назад</span>
+											<p class="user__msg">Выполнено быстро, качественно. <br><br>Доволен. <br><br>Заказал работу ещё для одного сайта, рекомендую исполнителя.</p>
+									</div>
+							</div>
+							<div class="review__user">
+									<div class="user__img">V</div>
+									<div class="user__content">
+											<h1 class="user__name">Vadzik</h1>
+											<span class="user__date">11 дней назад</span>
+											<p class="user__msg">Второй сайт сделал за 4 часа :) <br><br>По скорости +- одинаково как и с первым <br><br>Рекомендую продавца/исполнителя</p>
+									</div>
+							</div>
+					</div>
+			</div>
+	</div> -->
 </section>
 	</main>
 	<footer class="footer">

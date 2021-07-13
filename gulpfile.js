@@ -12,6 +12,7 @@ const scss = require('gulp-sass')(require('node-sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
+var gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso');
 // JS
 const uglify = require('gulp-uglify-es').default;
@@ -124,6 +125,7 @@ function styleDev() {
 			grid: 'no-autoplace'
 		}))
 		.pipe(rename('style.min.css'))
+		.pipe(gcmq())
 		.pipe(dest('dev/css'))
 		.pipe(browserSync.stream())
 }

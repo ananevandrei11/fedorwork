@@ -47,84 +47,150 @@ window.onload = function () {
 	// PRICE OPEN END
 
 
-	// CAROUSEL START
-	let carousel = document.querySelector('.portfolio__carusel');
-	let list = carousel.querySelector('.portfolio__slider');
-	let listElems = carousel.querySelectorAll('.portfolio__item');
-	let galleriBlock = carousel.querySelector('.portfolio__gallery');
-	let btnPrev = carousel.querySelector('.portfolio__arrow-prev');
-	let btnNext = carousel.querySelector('.portfolio__arrow-next');
-	let btnLoad = document.querySelector('.portfolio__btn-load');
-	let position = 0;
-	let width = 347;
-	let count;
+	// CAROUSEL WORKS START
+	let carouselWork = document.querySelector('.portfolio__carousel');
+	let listWork = carouselWork.querySelector('.portfolio__slider');
+	let listElemsWork = carouselWork.querySelectorAll('.portfolio__item');
+	let galleriBlockWork = carouselWork.querySelector('.portfolio__gallery');
+	let btnPrevWork = carouselWork.querySelector('.portfolio__arrow-prev');
+	let btnNextWork = carouselWork.querySelector('.portfolio__arrow-next');
+	let btnLoadWork = document.querySelector('.portfolio__btn-load');
+	let positionWork = 0;
+	let widthWork = 347;
+	let countWork;
 
 	if (window.innerWidth > 1240) {
-		count = 3;
+		countWork = 3;
 	} else if (window.innerWidth <= 1240) {
-		count = 2;
+		countWork = 2;
 	}
 
-	btnPrev.onclick = function () {
+	btnPrevWork.onclick = function () {
 		if (window.innerWidth > 1240) {
-			count = 3;
+			countWork = 3;
 		} else if (window.innerWidth <= 1240) {
-			count = 2;
+			countWork = 2;
 		}
-		position += width * count;
-		if (position == 0) {
+		positionWork += widthWork * countWork;
+		if (positionWork == 0) {
 			this.setAttribute('disabled', 'disabled');
-			btnNext.removeAttribute('disabled');
+			btnNextWork.removeAttribute('disabled');
 		} else {
 			this.removeAttribute('disabled');
-			btnNext.removeAttribute('disabled');
+			btnNextWork.removeAttribute('disabled');
 		}
-		position = Math.min(position, 0)
-		list.style.marginLeft = position + 'px';
+		positionWork = Math.min(positionWork, 0)
+		listWork.style.marginLeft = positionWork + 'px';
 	};
 
-	btnNext.onclick = function () {
+	btnNextWork.onclick = function () {
 		if (window.innerWidth > 1240) {
-			count = 3;
+			countWork = 3;
 		} else if (window.innerWidth <= 1240) {
-			count = 2;
+			countWork = 2;
 		}
-		position -= width * count;
-		let disPoint = (listElems.length * width);
-		if (Math.abs(position) >= disPoint) {
+		positionWork -= widthWork * countWork;
+		let disPointWork = (listElemsWork.length * widthWork);
+		if (Math.abs(positionWork) >= disPointWork) {
 			this.setAttribute('disabled', 'disabled');
-			btnPrev.removeAttribute('disabled');
+			btnPrevWork.removeAttribute('disabled');
 		} else {
 			this.removeAttribute('disabled');
-			btnPrev.removeAttribute('disabled');
+			btnPrevWork.removeAttribute('disabled');
 		}
-		position = Math.max(position, -width * (listElems.length - count));
-		list.style.marginLeft = position + 'px';
+		positionWork = Math.max(positionWork, -widthWork * (listElemsWork.length - countWork));
+		listWork.style.marginLeft = positionWork + 'px';
 	};
 
-	btnLoad.onclick = function () {
+	btnLoadWork.onclick = function () {
 		let arrClass = [];
-		listElems.forEach((item, ind) => {
+		listElemsWork.forEach((item, ind) => {
 			if (item.classList.contains('portfolio__item-open')) {
 				arrClass.push(ind);
 			};
 		});
 
-		if (arrClass.length < listElems.length) {
-			let diffLength = listElems.length - arrClass.length;
+		if (arrClass.length < listElemsWork.length) {
+			let diffLength = listElemsWork.length - arrClass.length;
 			if (diffLength > 3) {
 				for (let i = arrClass.length; i < arrClass.length + 3; i++) {
-					listElems[i].classList.remove('portfolio__item-close');
-					listElems[i].classList.add('portfolio__item-open');
+					listElemsWork[i].classList.remove('portfolio__item-close');
+					listElemsWork[i].classList.add('portfolio__item-open');
 				}
 			} else {
 				for (let i = arrClass.length; i < arrClass.length + diffLength; i++) {
-					listElems[i].classList.remove('portfolio__item-close');
-					listElems[i].classList.add('portfolio__item-open');
+					listElemsWork[i].classList.remove('portfolio__item-close');
+					listElemsWork[i].classList.add('portfolio__item-open');
 				}
 			}
 
 		}
 	}
-	// CAROUSEL END
+	// CAROUSEL WORKS END
+
+
+	// CAROUSEL REVIEW START
+	let carouselReview = document.querySelector('.reviews__carusel');
+	let listReview = carouselReview.querySelector('.reviews__slider');
+	let listElemsReview = carouselReview.querySelectorAll('.reviews__item');
+	let galleriBlockReview = carouselReview.querySelector('.reviews__gallery');
+	let btnPrevReview = carouselReview.querySelector('.reviews__arrow-prev');
+	let btnNextReview = carouselReview.querySelector('.reviews__arrow-next');
+	let btnLoadReview = document.querySelector('.reviews__btn-load');
+	let positionReview = 0;
+	let heightReview = 149;
+	let countReview = 2;
+
+	btnPrevReview.onclick = function () {
+		positionReview += heightReview * countReview;
+		if (positionReview == 0) {
+			this.setAttribute('disabled', 'disabled');
+			btnNextReview.removeAttribute('disabled');
+		} else {
+			this.removeAttribute('disabled');
+			btnNextReview.removeAttribute('disabled');
+		}
+		positionReview = Math.min(positionReview, 0)
+		listReview.style.marginTop = positionReview + 'px';
+	};
+
+	btnNextReview.onclick = function () {
+		positionReview -= heightReview * countReview;
+		let disPointReview = (listElemsReview.length * heightReview);
+		if (Math.abs(positionReview) >= disPointReview) {
+			this.setAttribute('disabled', 'disabled');
+			btnPrevReview.removeAttribute('disabled');
+		} else {
+			this.removeAttribute('disabled');
+			btnPrevReview.removeAttribute('disabled');
+		}
+		positionReview = Math.max(positionReview, -heightReview * (listElemsReview.length - countReview));
+		listReview.style.marginTop = positionReview + 'px';
+	};
+
+	btnLoadReview.onclick = function () {
+		let arrClass = [];
+		listElemsReview.forEach((item, ind) => {
+			if (item.classList.contains('reviews__item-open')) {
+				arrClass.push(ind);
+			};
+		});
+
+		if (arrClass.length < listElemsReview.length) {
+			let diffLength = listElemsReview.length - arrClass.length;
+			if (diffLength > 3) {
+				for (let i = arrClass.length; i < arrClass.length + 3; i++) {
+					listElemsReview[i].classList.remove('reviews__item-close');
+					listElemsReview[i].classList.add('reviews__item-open');
+				}
+			} else {
+				for (let i = arrClass.length; i < arrClass.length + diffLength; i++) {
+					listElemsReview[i].classList.remove('reviews__item-close');
+					listElemsReview[i].classList.add('reviews__item-open');
+				}
+			}
+
+		}
+	}
+	// CAROUSEL REVIEW END
 }

@@ -1,4 +1,5 @@
-.portfolio {
+.reviews {
+	margin-bottom: 82px;
 	padding: 56px 0px;
 	height: auto;
 	transition: all 0.4s ease;
@@ -43,11 +44,11 @@
 		}
 	}
 
-	&__carousel {
+	&__carusel {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 19px;
+		gap: 46px;
 
 		@media screen and (max-width: 900px) {
 			flex-direction: column;
@@ -55,9 +56,9 @@
 	}
 
 	&__gallery {
-		width: 991px;
+		width: 687px;
 		margin: 0 auto;
-		height: 213px;
+		height: 250px;
 		overflow: hidden;
 
 		@media screen and (max-width: 1240px) {
@@ -65,18 +66,22 @@
 		}
 
 		@media screen and (max-width: 900px) {
-			width: 100% !important;
 			height: auto;
+		}
+		@media screen and (max-width: 740px) {
+			width: 314px;
+		}
+		@media screen and (max-width: 360px) {
+			width: 270px;
 		}
 	}
 
 	&__slider {
-		width: 9999px;
-		height: inherit;
+		height: 9999px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: nowrap;
-		gap: 50px;
+		gap: 48px;
 		transition: all 0.4s;
 
 		@media screen and (max-width: 900px) {
@@ -88,24 +93,15 @@
 	}
 
 	&__item {
-		width: 297px;
-		height: 213px;
-		border: 1px solid rgba(0, 0, 0, 0.5);
-		border-radius: 20px;
+		width: 687px;
+		height: 101px;
+		//border: 1px solid rgba(0, 0, 0, 1);
 		overflow: hidden;
-
-		@media screen and (max-width: 900px) {
-			margin: 0 auto;
+		@media screen and (max-width: 1240px) {
+			width: 100%;
 		}
-
-		@media screen and (max-width: 480px) {
-			width: 313px;
-			height: 225px;
-
-		}
-		@media screen and (max-width: 360px) {
-			width: 260px;
-			height: 200px;
+		@media screen and (max-width: 740px) {
+			height: 55px !important;
 		}
 	}
 
@@ -122,9 +118,9 @@
 	}
 
 	&__img {
-		max-width: 100%;
+		width: 100%;
 		height: 100%;
-		object-fit: cover;
+		object-fit: contain;
 	}
 
 	&__arrow {
