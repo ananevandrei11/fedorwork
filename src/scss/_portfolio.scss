@@ -1,0 +1,163 @@
+.portfolio {
+	padding: 56px 0px;
+	height: auto;
+	transition: all 0.4s ease;
+
+	text-align: center;
+
+	@media screen and (max-width: 480px) {
+		padding: 32px 0px;
+	}
+
+	&__title {
+		margin-bottom: 16px;
+		text-align: center;
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 47px;
+		color: #000;
+
+		@media screen and (max-width: 480px) {
+			margin-bottom: 18px;
+			font-size: 23px;
+			line-height: 27px;
+		}
+	}
+
+	&__description {
+		margin-bottom: 45px;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 21px;
+		color: rgba(0, 0, 0, 0.7);
+
+		a {
+			font-weight: 500;
+			color: #0500FF;
+		}
+	}
+
+	&__carusel {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 19px;
+
+		@media screen and (max-width: 900px) {
+			flex-direction: column;
+		}
+	}
+
+	&__gallery {
+		width: 991px;
+		margin: 0 auto;
+		height: 213px;
+		overflow: hidden;
+
+		@media screen and (max-width: 1240px) {
+			width: 644px;
+		}
+
+		@media screen and (max-width: 900px) {
+			width: 100% !important;
+			height: auto;
+		}
+	}
+
+	&__slider {
+		width: 9999px;
+		height: inherit;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		gap: 50px;
+		transition: all 0.4s;
+
+		@media screen and (max-width: 900px) {
+			width: inherit;
+			height: auto;
+			flex-direction: column;
+			gap: 29px;
+		}
+	}
+
+	&__item {
+		width: 297px;
+		height: 213px;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		border-radius: 20px;
+		overflow: hidden;
+
+		@media screen and (max-width: 900px) {
+			margin: 0 auto;
+		}
+
+		@media screen and (max-width: 480px) {
+			width: 313px;
+			height: 225px;
+
+		}
+		@media screen and (max-width: 360px) {
+			width: 300px;
+			height: 220px;
+		}
+	}
+
+	&__item-open {
+		@media screen and (max-width: 900px) {
+			display: block;
+		}
+	}
+
+	&__item-close {
+		@media screen and (max-width: 900px) {
+			display: none;
+		}
+	}
+
+	&__img {
+		max-width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__arrow {
+		flex-shrink: 0;
+		width: 64px;
+		height: 64px;
+		border-radius: 50px;
+		border: 1px solid #0500FF;
+		background-color: transparent;
+
+		@media screen and (max-width: 900px) {
+			display: none;
+		}
+
+		i {
+			font-size: 19px;
+			color: #0500FF;
+		}
+
+		&:disabled {
+			opacity: 0.5;
+		}
+	}
+
+	&__arrow-next {
+		transform: rotate(180deg);
+	}
+
+	&__btn {
+		display: none;
+		margin: 0 auto;
+		margin-top: 31px;
+		padding: 8px 16px 7px 20px;
+		font-weight: 700;
+		font-size: 11px;
+		line-height: 179.19%;
+		border-radius: 29px;
+		@media screen and (max-width: 900px) {
+			display: block;
+		}
+	}
+}

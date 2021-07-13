@@ -40,8 +40,10 @@
 		&__item {
 			@media screen and (max-width: 480px) {
 				margin-bottom: 21px;
+				margin-right: 0px;
 				&:nth-of-type(4) {
 					margin-bottom: 0px;
+					margin-right: 0px;
 				}
 			}
 		}
