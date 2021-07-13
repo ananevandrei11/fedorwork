@@ -1,6 +1,6 @@
-const yourId = '897078996';
+const yourId = '';
 /* токен бота */
-const token = '1476474018:AAEE6lTN7EebIkistIy9rov4lDbcPLhMq1I';
+const token = '';
 
 const form = document.forms.mainForm
 form.addEventListener('submit', e => {
