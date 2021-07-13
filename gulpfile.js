@@ -36,12 +36,12 @@ function style() {
 		.pipe(dest('dist/css'))
 }
 
-function styleVendors() {
-	return src([
-		'dev/css/vendor/vendors.min.css',
-	])
-	.pipe(dest('dist/css/vendor/'))
-}
+// function styleVendors() {
+// 	return src([
+// 		'dev/css/vendor/vendors.min.css',
+// 	])
+// 	.pipe(dest('dist/css/vendor/'))
+// }
 
 function js() {
 	return src([
@@ -52,13 +52,13 @@ function js() {
 	.pipe(dest('dist/js'))
 }
 
-function jsVendors() {
-	return src([
-		'dev/js/vendors/vendors.min.js',
-	])
-	.pipe(uglify())
-	.pipe(dest('dist/js/vendors/'))
-}
+// function jsVendors() {
+// 	return src([
+// 		'dev/js/vendors/vendors.min.js',
+// 	])
+// 	.pipe(uglify())
+// 	.pipe(dest('dist/js/vendors/'))
+// }
 
 function images() {
 	return src([
@@ -89,13 +89,13 @@ function cleanDist() {
 
 exports.html = html;
 exports.style = style;
-exports.styleVendors = styleVendors;
+//exports.styleVendors = styleVendors;
 exports.js = js;
-exports.jsVendors = jsVendors;
+//exports.jsVendors = jsVendors;
 exports.images = images;
 exports.fonts = fonts;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, html, style, styleVendors, js, jsVendors, images, fonts);
+exports.build = series(cleanDist, html, style, js, images, fonts);
 
 //! MODE DEVELOP STAR
 function browsersyncDev() {

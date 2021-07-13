@@ -59,10 +59,20 @@ window.onload = function () {
 	let widthWork = 347;
 	let countWork;
 
-	if (window.innerWidth > 1240) {
-		countWork = 3;
-	} else if (window.innerWidth <= 1240) {
-		countWork = 2;
+	let modalGlr = document.querySelector('.modal-slider');
+	let closeGlr = modalGlr.querySelector('.icon-error');
+	closeGlr.onclick = () => {
+		modalGlr.classList.remove('modal-slider__open');
+		modalGlr.classList.add('modal-slider__close');
+	}
+	listWork.onclick = function(e) {
+		let target = e.target;
+		if (target.tagName != 'IMG') return false;
+		
+		let imgGlr = modalGlr.querySelector('img');
+		modalGlr.classList.remove('modal-slider__close');
+		modalGlr.classList.add('modal-slider__open');
+		imgGlr.setAttribute('src', target.getAttribute('src'));
 	}
 
 	btnPrevWork.onclick = function () {
@@ -130,6 +140,7 @@ window.onload = function () {
 
 
 	// CAROUSEL REVIEW START
+	/*
 	let carouselReview = document.querySelector('.reviews__carusel');
 	let listReview = carouselReview.querySelector('.reviews__slider');
 	let listElemsReview = carouselReview.querySelectorAll('.reviews__item');
@@ -192,5 +203,6 @@ window.onload = function () {
 
 		}
 	}
+	*/
 	// CAROUSEL REVIEW END
 }
