@@ -262,11 +262,8 @@ window.onload = function () {
 			}
 		}
 	}
+	window.addEventListener('resize', function() {
+		listWork.style.marginLeft = "0px";
+	});
 	// CAROUSEL WORKS END
-	let arrGlr = document.querySelectorAll('.portfolio__img');
-	arrGlr.forEach(item => {
-		item.onmouseover = function() {
-			console.log("OK");
-		}
-	})
 }

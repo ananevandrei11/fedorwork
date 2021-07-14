@@ -15,7 +15,7 @@ const mqpacker = require('css-mqpacker');
 var gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso');
 // JS
-//const uglify = require('gulp-uglify-es').default;
+const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
 //const sourcemaps = require('gulp-sourcemaps');
 // IMAGE
@@ -52,13 +52,13 @@ function js() {
 	.pipe(dest('dist/js'))
 }
 //minimization - .pipe(uglify())
-// function jsVendors() {
-// 	return src([
-// 		'dev/js/vendors/vendors.min.js',
-// 	])
-// 	.pipe(uglify())
-// 	.pipe(dest('dist/js/vendors/'))
-// }
+function jsVendors() {
+	return src([
+		'dev/js/vendors/vendors.min.js',
+	])
+	.pipe(uglify())
+	.pipe(dest('dist/js/vendors/'))
+}
 
 function images() {
 	return src([
@@ -91,11 +91,11 @@ exports.html = html;
 exports.style = style;
 //exports.styleVendors = styleVendors;
 exports.js = js;
-//exports.jsVendors = jsVendors;
+exports.jsVendors = jsVendors;
 exports.images = images;
 exports.fonts = fonts;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, html, style, js, images, fonts);
+exports.build = series(cleanDist, html, style, js, jsVendors, images, fonts);
 
 //! MODE DEVELOP STAR
 function browsersyncDev() {
@@ -159,14 +159,14 @@ function jsDev() {
 }
 
 // TODO: ADD HERE PLUGINS OF JS FROM NODE MODULES
-/*function jsVendorsDev() {
+function jsVendorsDev() {
 	return src([
-		'node_modules/ismobilejs/dist/isMobile.min.js'
+		'src/js/lazysizes.min.js'
 	])
 	.pipe(concat('vendors.js'))
 	.pipe(rename('vendors.min.js'))
 	.pipe(dest('dev/js/vendors/'))
-}*/
+}
 
 function imagesDev() {
 	return src('src/img/**/*')
@@ -219,14 +219,14 @@ exports.htmlDev = htmlDev;
 exports.styleDev = styleDev;
 //exports.styleVendorDev = styleVendorDev;
 exports.jsDev = jsDev;
-//exports.jsVendorsDev = jsVendorsDev;
+exports.jsVendorsDev = jsVendorsDev;
 exports.imagesDev = imagesDev;
 exports.otf2ttf = otf2ttf;
 exports.fontsDev = fontsDev;
 exports.cleanDev = cleanDev;
 exports.browsersyncDev = browsersyncDev;
 exports.watchDev = watchDev;
-exports.dev = parallel(cleanDev, htmlDev, styleDev, jsDev, imagesDev, fontsDev, browsersyncDev, watchDev);
+exports.dev = parallel(cleanDev, htmlDev, styleDev, jsDev, jsVendorsDev, imagesDev, fontsDev, browsersyncDev, watchDev);
 /** *****************
  * TODO: IF THERE ARE PROBLEMS - npm cache clean --force
  * ******************

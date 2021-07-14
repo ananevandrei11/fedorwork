@@ -6,29 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ускорение сайта</title>
-	<!-- <link rel="preload" href="fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/gilroy-bold.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/gilroy-light.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/gilroy-light.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/gilroy-medium.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/gilroy-medium.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/gilroy-regular.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/gilroy-regular.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/gilroy-semibold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/gilroy-semibold.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/icomoon.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/icomoon.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/icomoon.svg" as="font" type="font/svg" crossorigin> -->
 	<link rel="preload" href="css/style.min.css" as="style" />
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="img/favic.png" type="image/x-icon" />
-<!--	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
 	<script type="text/javascript">
 		VK.init({
 			apiId: 7902616,
 			onlyWidgets: true
 		});
-	</script> -->
+	</script>
 </head>
 
 <body>
@@ -222,22 +209,22 @@
 			<div class="portfolio__gallery">
 				<ul class="portfolio__slider">
 					<li class="portfolio__item portfolio__item-open">
-						<img class="portfolio__img" src="img/works/1_min.jpg" alt="1" loading="lazy">
+						<img class="portfolio__img lazyload"  data-src="img/works/1_min.jpg" alt="1" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-open">
-						<img class="portfolio__img" src="img/works/2_min.jpg" alt="2" loading="lazy">
+						<img class="portfolio__img lazyload"  data-src="img/works/2_min.jpg" alt="2" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-open">
-						<img class="portfolio__img" src="img/works/3_min.jpg" alt="3" loading="lazy">
+						<img class="portfolio__img lazyload"  data-src="img/works/3_min.jpg" alt="3" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-close">
-						<img class="portfolio__img" src="img/works/4_min.jpg" alt="4" loading="lazy">
+						<img class="portfolio__img lazyload"  data-src="img/works/4_min.jpg" alt="4" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-close">
-						<img class="portfolio__img" src="img/works/5_min.jpg" alt="5" loading="lazy">
+						<img class="portfolio__img lazyload"  data-src="img/works/5_min.jpg" alt="5" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-close">
-						<img class="portfolio__img" src="img/works/6_min.jpg" alt="6" loading="lazy">
+						<img class="portfolio__img lazyload"  data-src="img/works/6_min.jpg" alt="6" loading="lazy">
 					</li>
 				</ul>
 			</div>
@@ -255,13 +242,13 @@
 				href="https://kwork.ru/website-repair/10160085/uskorenie-sayta-wordpress-po-google-pagespeed-insights"
 				target="_blank">тут</a></p>
 		<div class="reviews__carusel">
-			<!--<div id="vk_comments"></div>
+			<div id="vk_comments"></div>
 			<script type="text/javascript">
 				VK.Widgets.Comments("vk_comments", {
 					limit: 10,
 					attach: "*"
 				});
-			</script>-->
+			</script>
 		</div>
 </section>
 	</main>
@@ -307,6 +294,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/script.min.js"></script>
+	<script src="js/vendors/vendors.min.js"></script>
 </body>
 
 </html>
