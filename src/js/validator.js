@@ -1,4 +1,3 @@
-window.onload = function () {
 	// VALIDATION ORDER SERVICE
 	let formOrder = document.querySelector('#form');
 	let inputName = formOrder.elements.input_name;
@@ -54,4 +53,3 @@ window.onload = function () {
 		valid(inputEmail, target, regexMail);
 		btnDisabled();
 	}
-}

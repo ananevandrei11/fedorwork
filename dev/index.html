@@ -6,6 +6,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ускорение сайта</title>
+	<!-- <link rel="preload" href="fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/gilroy-bold.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/gilroy-light.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/gilroy-light.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/gilroy-medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/gilroy-medium.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/gilroy-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/gilroy-regular.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/gilroy-semibold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/gilroy-semibold.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/icomoon.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/icomoon.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/icomoon.svg" as="font" type="font/svg" crossorigin> -->
+	<link rel="preload" href="css/style.min.css" as="style" />
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="img/favic.png" type="image/x-icon" />
 <!--	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
@@ -40,7 +54,7 @@
 			<!--HEADER LOGO BLOCK-->
 			<div class="avatar">
 	<a href="/" class="avatar__link avatar__link-logo">
-		<img class="avatar__img" src="img/avatar.png" alt="">
+		<img class="avatar__img" src="img/avatar.jpg" alt="" loading="lazy">
 	</a>
 	<div class="avatar__separator"></div>
 	<a href="/" class="avatar__link avatar__link-title">ФРИЛАНСЕР FEDOR-WORK</a>
@@ -67,9 +81,9 @@
 		</li>
 		<li class="menu__item menu__item-contacts contacts">
 			<ul class="contacts__list">
-				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk"></a></li>
-				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork"></a></li>
-				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk" target="_blank"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork" target="_blank"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram" target="_blank"></a></li>
 			</ul>
 		</li>
 	</ul>
@@ -143,6 +157,7 @@
 						<li class="workcost__item"><span>Оптимизация CSS, JS</span></li>
 						<li class="workcost__item"><span>Настройка кеширвания</span></li>
 						<li class="workcost__item"><span>Сокращение запросов</span></li>
+						<li class="workcost__item"><span>Сокращение запросов</span></li>
 					</ul>
 					<button class="btn-common workcost__btn" onclick="window.location.href='#form'">Заказать за 500 ₽</button>
 				</article>
@@ -207,22 +222,22 @@
 			<div class="portfolio__gallery">
 				<ul class="portfolio__slider">
 					<li class="portfolio__item portfolio__item-open">
-						<img class="portfolio__img" src="img/works/1.jpg" alt="1">
+						<img class="portfolio__img" src="img/works/1_min.jpg" alt="1" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-open">
-						<img class="portfolio__img" src="img/works/2.jpg" alt="2">
+						<img class="portfolio__img" src="img/works/2_min.jpg" alt="2" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-open">
-						<img class="portfolio__img" src="img/works/3.jpg" alt="3">
+						<img class="portfolio__img" src="img/works/3_min.jpg" alt="3" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-close">
-						<img class="portfolio__img" src="img/works/4.jpg" alt="4">
+						<img class="portfolio__img" src="img/works/4_min.jpg" alt="4" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-close">
-						<img class="portfolio__img" src="img/works/5.jpg" alt="5">
+						<img class="portfolio__img" src="img/works/5_min.jpg" alt="5" loading="lazy">
 					</li>
 					<li class="portfolio__item portfolio__item-close">
-						<img class="portfolio__img" src="img/works/6.jpg" alt="6">
+						<img class="portfolio__img" src="img/works/6_min.jpg" alt="6" loading="lazy">
 					</li>
 				</ul>
 			</div>
@@ -231,15 +246,6 @@
 			</button>
 		</div>
 		<button class="btn-common portfolio__btn portfolio__btn-load">Загрузить ещё</button>
-		<!--MODAL GALLERY-->
-		<div class="portfolio__modal modal-slider modal-slider__close">
-			<i class="icon-error modal-slider__icon-close"></i>
-			<i class="icon-arrow modal-slider__icon-prev"></i>
-			<figure class="modal-slider__figure">
-				<img src="" alt="" class="modal-slider__img">
-			</figure>
-			<i class="icon-arrow modal-slider__icon-next"></i>
-		</div>
 	</div>
 </section>
 		<section id="reviews" class="reviews">
@@ -265,7 +271,7 @@
 			<!--footer LOGO BLOCK-->
 			<div class="avatar">
 	<a href="/" class="avatar__link avatar__link-logo">
-		<img class="avatar__img" src="img/avatar.png" alt="">
+		<img class="avatar__img" src="img/avatar.jpg" alt="" loading="lazy">
 	</a>
 	<div class="avatar__separator"></div>
 	<a href="/" class="avatar__link avatar__link-title">ФРИЛАНСЕР FEDOR-WORK</a>
@@ -288,9 +294,9 @@
 		</li>
 		<li class="menu__item menu__item-contacts contacts">
 			<ul class="contacts__list">
-				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk"></a></li>
-				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork"></a></li>
-				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-vk" target="_blank"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-kwork" target="_blank"></a></li>
+				<li class="contacts__item"><a href="#" class="contacts__link contacts__link-telegram" target="_blank"></a></li>
 			</ul>
 		</li>
 	</ul>

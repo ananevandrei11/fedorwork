@@ -27,6 +27,149 @@ window.onload = function () {
 	})
 	// MENU OPEN END
 
+	// VALIDATION ORDER SERVICE START
+	let formOrder = document.querySelector('#form');
+	let inputName = formOrder.elements.input_name;
+	let inputLink = formOrder.elements.input_link;
+	let inputEmail = formOrder.elements.input_email;
+	let btnOrder = formOrder.querySelector('button[type="submit"]');
+	let regexName = /^[A-zА-яЁё, \n]+$/;
+	let regexSite = /^[-A-zА-яЁё0-9+&@#\/%?=~_|!:,.;]\.*[-A-zА-яЁё0-9+&@#\/%?=~_|!:,.;]*\.[-A-zА-яЁё0-9+&@#\/%=~_|]/;
+	let regexMail = /@(?:[A-z0-9](?:[A-z0-9-]*[A-z0-9])?)/;
+
+	function valid(elem, target, reg) {
+		let check = target.parentElement.querySelector('.icon-error');
+		let succes = target.parentElement.querySelector('.icon-check');
+		if (elem.value.match(reg) && elem.value.length > 0) {
+			succes.style.visibility = 'visible';
+			check.style.visibility = 'hidden';
+		} else if (!elem.value.match(reg) && elem.value.length > 0) {
+			succes.style.visibility = 'hidden';
+			check.style.visibility = 'visible';
+		} else {
+			succes.style.visibility = 'hidden';
+			check.style.visibility = 'hidden';
+		}
+	}
+
+	function btnDisabled() {
+		let iconCheck = formOrder.querySelectorAll('.icon-check');
+		let arr = [];
+		for (let i = 0; i < iconCheck.length; i++) {
+			if (iconCheck[i].style.visibility == 'visible') {
+				arr.push('1');
+			}
+		}
+		if (arr.length >= 3) {
+			btnOrder.removeAttribute('disabled');
+		} else {
+			btnOrder.setAttribute('disabled', 'disabled');
+		}
+	}
+
+	inputName.oninput = (event) => {
+		let target = event.target;
+		valid(inputName, target, regexName);
+		btnDisabled();
+	}
+	inputLink.oninput = (event) => {
+		let target = event.target;
+		valid(inputLink, target, regexSite);
+		btnDisabled();
+	}
+	inputEmail.oninput = (event) => {
+		let target = event.target;
+		valid(inputEmail, target, regexMail);
+		btnDisabled();
+	}
+	// VALIDATION ORDER SERVICE END
+
+	// TELEGRAM SEND START
+	const yourId = '897078996';
+	/* токен бота */
+	const token = '1476474018:AAEE6lTN7EebIkistIy9rov4lDbcPLhMq1I';
+
+	const form = document.forms.mainForm
+	form.addEventListener('submit', e => {
+		e.preventDefault();
+		let name = form.input_name.value;
+		let link = form.input_link.value;
+		let email = form.input_email.value;
+		let tarif = form.input_tarif.value;
+
+		function validateEmail(email, link) {
+			if (email.indexOf('@') > -1) {
+				if (link.indexOf('.') > -1) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+
+		}
+		if (validateEmail(email, link) === true) {
+			let msg = "Имя:%20" + name + "%0A" + "Ссылка на сайт:%20" + link + "%0A" + "Тариф:%20" + tarif + "%0A" + "Почта/телеграм:%20" + email;
+
+			let xhttp = new XMLHttpRequest();
+
+			let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=" + yourId + "&text=";
+
+			xhttp.open('GET', url + msg);
+			xhttp.send();
+			form.input_name.value = '';
+			form.input_link.value = '';
+			form.input_email.value = '';
+			form.input_tarif.value = '';
+
+			const push = document.querySelector('.push-block');
+			const pushClose = document.querySelector('.push__close');
+			let body = document.body;
+			xhttp.addEventListener('readystatechange', function () {
+				if (this.readyState === 4 && this.status === 200) {
+					let checks = document.querySelectorAll('.icon-error');
+					let success = document.querySelectorAll('.icon-check');
+					checks.forEach(item => item.style.visibility = 'hidden');
+					success.forEach(item => item.style.visibility = 'hidden');
+
+					disableScroll();
+					push.classList.add('push-block-active');
+					setTimeout(() => push.style.opacity = 1, 500);
+					setTimeout(() => {
+						push.style.opacity = 0;
+						setTimeout(() => {
+							push.classList.remove('push-block-active');
+							enableScroll();
+						}, 500)
+					}, 5000)
+				}
+			})
+			pushClose.addEventListener('click', () => {
+				push.style.opacity = 0;
+				setTimeout(() => {
+					push.classList.remove('push-block-active');
+					enableScroll();
+				}, 500)
+			})
+
+			function disableScroll() {
+				let pagePosition = window.scrollY;
+				body.classList.add('scroll-hidden');
+				body.dataset.position = pagePosition;
+			}
+
+			function enableScroll() {
+				let pagePosition = parseInt(body.dataset.position, 10);
+				body.style.top = 'auto';
+				body.classList.remove('scroll-hidden');
+				window.scroll({ top: pagePosition, left: 0 });
+				body.removeAttribute('data-position');
+			}
+		}
+	})
+	// TELEGRAM SEND END
+
 	// PRICE OPEN START
 	const workProduct = document.querySelectorAll('.workcost__product');
 	workProduct.forEach(element => {
@@ -120,49 +263,10 @@ window.onload = function () {
 		}
 	}
 	// CAROUSEL WORKS END
-
-	// MODAL GALLERY START
-	let modalGlr = document.querySelector('.modal-slider');
-	let imgGlr = modalGlr.querySelector('img');
 	let arrGlr = document.querySelectorAll('.portfolio__img');
-	let closeGlr = modalGlr.querySelector('.icon-error');
-	let modalPrev = modalGlr.querySelector('.modal-slider__icon-prev');
-	let modalNExt = modalGlr.querySelector('.modal-slider__icon-next');
-	closeGlr.onclick = () => {
-		modalGlr.classList.remove('modal-slider__open');
-		modalGlr.classList.add('modal-slider__close');
-	}
-	listWork.onclick = function (e) {
-		let target = e.target;
-		if (target.tagName != 'IMG') return false;
-		modalGlr.classList.remove('modal-slider__close');
-		modalGlr.classList.add('modal-slider__open');
-		imgGlr.setAttribute('src', target.getAttribute('src'));
-	}
-
-	let arrImg = [];
 	arrGlr.forEach(item => {
-		arrImg.push(item.getAttribute('src'));
-	});
-
-	modalPrev.onclick = function () {
-		let imgCurrent = imgGlr.getAttribute('src');
-		let imgIndex = arrImg.indexOf(imgCurrent);
-		if (imgIndex == 0) {
-			imgIndex = arrImg.length;
+		item.onmouseover = function() {
+			console.log("OK");
 		}
-		imgIndex--;
-		imgGlr.setAttribute('src', arrImg[imgIndex]);
-	}
-
-	modalNExt.onclick = function () {
-		let imgCurrent = imgGlr.getAttribute('src');
-		let imgIndex = arrImg.indexOf(imgCurrent);
-		imgIndex++;
-		if (imgIndex == arrImg.length) {
-			imgIndex = 0;
-		}
-		imgGlr.setAttribute('src', arrImg[imgIndex]);
-	}
-	// MODAL GALLERY END
+	})
 }

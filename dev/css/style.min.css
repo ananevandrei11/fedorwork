@@ -340,6 +340,7 @@ i {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .avatar__separator {
@@ -426,15 +427,15 @@ i {
 }
 
 .menu .contacts__link-vk {
-  background: url("../img/contacts/vk.svg") center/100% 100% no-repeat;
+  background: url("../img/contacts/vk.svg") center/cover no-repeat;
 }
 
 .menu .contacts__link-kwork {
-  background: url("../img/contacts/kwork.svg") center/100% 100% no-repeat;
+  background: url("../img/contacts/kwork.svg") center/cover no-repeat;
 }
 
 .menu .contacts__link-telegram {
-  background: url("../img/contacts/telegram.svg") center/100% 100% no-repeat;
+  background: url("../img/contacts/telegram.svg") center/cover no-repeat;
 }
 
 /* nav-end */
@@ -822,8 +823,7 @@ i {
 
 .cost .workcost__product {
   display: inline-block;
-  max-width: 277px;
-  padding: 14px 31px;
+  width: 277px;
   border: 1px solid #0500FF;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -835,10 +835,10 @@ i {
 
 .cost .workcost__product-open {
   border-radius: 19px;
-  padding: 15px 29px 21px 31px;
 }
 
 .cost .workcost__title {
+  padding: 14px 31px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -881,10 +881,11 @@ i {
 }
 
 .cost .workcost__info-open {
-  margin-top: 29px;
+  margin-top: 14.5px;
   height: auto;
   visibility: visible;
   opacity: 1;
+  padding: 0px 29px 21px 31px;
 }
 
 .cost .workcost__list {
@@ -955,6 +956,12 @@ i {
   margin: 0 auto;
   height: 213px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .portfolio__slider {
@@ -976,11 +983,19 @@ i {
 }
 
 .portfolio__item {
+  position: relative;
   width: 297px;
   height: 213px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio__item:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .portfolio__img {
@@ -1024,73 +1039,6 @@ i {
   font-size: 11px;
   line-height: 179.19%;
   border-radius: 29px;
-}
-
-.modal-slider {
-  position: fixed;
-  top: 15%;
-  left: 15%;
-  background-color: rgba(161, 159, 159, 0.9);
-  border: 1px solid #0500FF;
-  width: 70vw;
-  height: 70vh;
-  z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.modal-slider__figure {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 90%;
-  height: 90%;
-  aspect-ratio: 4/3;
-}
-
-.modal-slider__img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 4/3;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-.modal-slider__icon-close {
-  position: absolute;
-  top: 1%;
-  right: 1%;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.modal-slider__icon-prev,
-.modal-slider__icon-next {
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.modal-slider__icon-next {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.modal-slider__open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal-slider__close {
-  display: none;
 }
 
 /* portfolio-end */
@@ -1385,33 +1333,6 @@ i {
   }
 }
 
-@media screen and (max-width: 740px) {
-  .modal-slider {
-    top: 7.5%;
-    left: 7.5%;
-    width: 85vw;
-    height: 85vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .modal-slider__icon-prev,
-  .modal-slider__icon-next {
-    position: absolute;
-    bottom: 10%;
-  }
-
-  .modal-slider__icon-prev {
-    left: 10%;
-  }
-
-  .modal-slider__icon-next {
-    right: 10%;
-  }
-}
-
 @media screen and (max-width: 580px) {
   .push {
     width: 80%;
@@ -1582,18 +1503,6 @@ i {
   .portfolio__item {
     width: 313px;
     height: 225px;
-  }
-
-  .modal-slider {
-    top: 2.5%;
-    left: 2.5%;
-    width: 95vw;
-    height: 95vh;
-  }
-
-  .modal-slider__figure {
-    width: 95%;
-    height: 95%;
   }
 
   .reviews {

@@ -34,8 +34,7 @@
 		}
 		&__product {
 			display: inline-block;
-			max-width: 277px;
-			padding: 14px 31px;
+			width: 277px;
 			border: 1px solid $mainColor;
 			box-sizing: border-box;
 			border-radius: 59px;
@@ -44,10 +43,11 @@
 
 		&__product-open {
 			border-radius: 19px;
-			padding: 15px 29px 21px 31px;
+			//padding: 15px 29px 21px 31px;
 		}
 
 		&__title {
+			padding: 14px 31px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -77,10 +77,11 @@
 		}
 
 		&__info-open {
-			margin-top: 29px;
+			margin-top: 14.5px;
 			height: auto;
 			visibility: visible;
 			opacity: 1;
+			padding: 0px 29px 21px 31px;
 		}
 
 		&__list {

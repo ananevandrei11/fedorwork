@@ -146,8 +146,6 @@ function styleDev() {
 
 function jsDev() {
 	return src([
-		'src/js/validator.js',
-		'src/js/telegram.js',
 		'src/js/main.js',
 		'!src/js/vendors/vendors.min.js'
 	])
