@@ -12,8 +12,8 @@
 	}
 
 	&__link-logo {
-		width: 79px;
-		height: 79px;
+		width: 60px;
+		height: 60px;
 		flex-shrink: 0;
 	
 		@media (max-width: 480px) {
@@ -30,7 +30,7 @@
 	}
 	
 	&__separator {
-		height: 63px;
+		height: 60px;
 		border-right: 1px solid #fff;
 	
 		@media screen and (max-width: 480px) {

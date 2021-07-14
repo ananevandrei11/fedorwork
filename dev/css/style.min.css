@@ -329,8 +329,8 @@ i {
 }
 
 .avatar__link-logo {
-  width: 79px;
-  height: 79px;
+  width: 60px;
+  height: 60px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -344,7 +344,7 @@ i {
 }
 
 .avatar__separator {
-  height: 63px;
+  height: 60px;
   border-right: 1px solid #fff;
 }
 
@@ -420,22 +420,24 @@ i {
   gap: 14px;
 }
 
+.menu .contacts__item {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
 .menu .contacts__link {
   display: inline-block;
   width: 35px;
   height: 35px;
 }
 
-.menu .contacts__link-vk {
-  background: url("../img/contacts/vk.svg") center/cover no-repeat;
-}
-
-.menu .contacts__link-kwork {
-  background: url("../img/contacts/kwork.svg") center/cover no-repeat;
-}
-
-.menu .contacts__link-telegram {
-  background: url("../img/contacts/telegram.svg") center/cover no-repeat;
+.menu .contacts__link img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 /* nav-end */
@@ -486,8 +488,8 @@ i {
   top: 0;
   left: 0;
   z-index: 1;
-  min-height: 122px;
-  padding: 21px 0px;
+  max-height: 80px;
+  padding: 10px 0px;
   background-color: #fff;
   -webkit-box-shadow: 0px 7px 103px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 7px 103px rgba(0, 0, 0, 0.15);
@@ -935,7 +937,7 @@ i {
 
 .portfolio__description {
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: 45px;
 }
 
 .portfolio__carousel {
@@ -948,13 +950,13 @@ i {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 2px;
+  gap: 19px;
 }
 
 .portfolio__gallery {
-  width: 1100px;
+  width: 991px;
   margin: 0 auto;
-  height: 300px;
+  height: 213px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -966,8 +968,7 @@ i {
 
 .portfolio__slider {
   width: 9999px;
-  height: 213px;
-  padding: 0px 24px;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -990,16 +991,6 @@ i {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   overflow: hidden;
-  cursor: pointer;
-}
-
-.portfolio__item:hover {
-  border: none;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  transform: scale(1.15);
 }
 
 .portfolio__img {
@@ -1087,7 +1078,7 @@ i {
 /* footer-start */
 
 .footer {
-  padding: 105px 0px;
+  padding: 50px 0px;
   background: #0500FF;
   -webkit-box-shadow: 0px 4px 97px rgba(5, 0, 255, 0.31);
   box-shadow: 0px 4px 97px rgba(5, 0, 255, 0.31);
@@ -1127,7 +1118,7 @@ i {
 
 @media screen and (max-width: 1240px) {
   .portfolio__gallery {
-    width: 700px;
+    width: 673px;
   }
 }
 
@@ -1204,7 +1195,7 @@ i {
 
   .header .menu-open {
     opacity: 1;
-    top: 100%;
+    top: 98%;
   }
 
   .header .menu__list {
@@ -1271,7 +1262,6 @@ i {
   .portfolio__slider {
     width: inherit;
     height: auto;
-    padding: 26px 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1334,7 +1324,6 @@ i {
 
   .footer .menu__item-contacts {
     margin: 0 auto;
-    margin-top: 46px;
   }
 }
 
@@ -1349,6 +1338,12 @@ i {
 
   .push__head h1 {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer .menu__item-contacts {
+    margin-top: 46px;
   }
 }
 
@@ -1502,20 +1497,12 @@ i {
 
   .portfolio__description {
     max-width: 174px;
+    margin-bottom: 29px;
   }
 
   .portfolio__item {
     width: 313px;
     height: 225px;
-  }
-
-  .portfolio__item:hover {
-    border: none;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
   }
 
   .reviews {
