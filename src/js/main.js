@@ -187,6 +187,35 @@ window.onload = function () {
 			}
 		})
 	});
+	let tarifs = document.querySelectorAll('.input_tarif');
+	let workcostBtn = document.querySelectorAll('.workcost__btn');
+	workcostBtn.forEach(item => {
+		item.onclick = function() {
+			let form = document.getElementById('form');
+			let cost = parseInt(item.innerHTML.match(/\d+/));
+			if (cost == 500) {
+				tarifs[0].checked  = true;
+				tarifs[0].setAttribute('checked','checked');
+				tarifs[1].removeAttribute('checked','checked');
+				tarifs[2].removeAttribute('checked','checked');
+			}
+			if (cost == 1000) {
+				tarifs[1].checked  = true;
+				tarifs[1].setAttribute('checked','checked');
+				tarifs[0].removeAttribute('checked','checked');
+				tarifs[2].removeAttribute('checked','checked');
+			}
+			if (cost == 1500) {
+				tarifs[2].checked  = true;
+				tarifs[2].setAttribute('checked','checked');
+				tarifs[0].removeAttribute('checked','checked');
+				tarifs[1].removeAttribute('checked','checked');
+			}
+			form.scrollIntoView(form.clientWidth);
+		}
+	});
+
+
 	// PRICE OPEN END
 
 
@@ -260,6 +289,14 @@ window.onload = function () {
 					listElemsWork[i].classList.add('portfolio__item-open');
 				}
 			}
+		} else {
+			listElemsWork.forEach((item, ind) => {
+				if (ind > 2) {
+					item.classList.remove('portfolio__item-open');
+					item.classList.add('portfolio__item-close');
+				}
+			})
+			window.open('https://kwork.ru/user/fedor-work', '_blank');
 		}
 	}
 	window.addEventListener('resize', function() {
