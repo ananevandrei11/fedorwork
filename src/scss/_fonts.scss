@@ -77,15 +77,21 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
+.icon-sun:before {
   content: "\e900";
 }
-.icon-menu:before {
+.icon-moon:before {
   content: "\e901";
 }
-.icon-error:before {
+.icon-menu:before {
   content: "\e902";
 }
-.icon-check:before {
+.icon-arrow:before {
   content: "\e903";
+}
+.icon-check:before {
+  content: "\e904";
+}
+.icon-error:before {
+  content: "\e905";
 }

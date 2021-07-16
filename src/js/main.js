@@ -1,4 +1,33 @@
 window.onload = function () {
+	// DARK THEME START
+	addDarkThemeHtml();
+	document.querySelector('.themetoggle').addEventListener('click', (e) => {
+		e.preventDefault();
+		if (localStorage.getItem('theme') === 'dark') {
+			localStorage.removeItem('theme');
+			addDarkThemeHtml();
+		} else {
+			localStorage.setItem('theme', 'dark');
+			addDarkThemeHtml();
+		}
+	});
+
+	function addDarkThemeHtml() {
+		try {
+			if (localStorage.getItem('theme') === 'dark') {
+				document.querySelector('html').classList.add('dark');
+				document.querySelector('.themetoggle i').classList.remove('icon-moon');
+				document.querySelector('.themetoggle i').classList.add('icon-sun');
+			} else {
+				document.querySelector('html').classList.remove('dark');
+				document.querySelector('.themetoggle i').classList.remove('icon-sun');
+				document.querySelector('.themetoggle i').classList.add('icon-moon');
+			}
+		} catch (err) {
+			console.log(err);
+		}
+	}
+	// DARK THEME END
 	// MENU OPEN START
 	let burger = document.querySelector('.hamburger');
 	let menu = document.querySelector('.menu');
